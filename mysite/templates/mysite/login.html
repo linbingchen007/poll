@@ -1,0 +1,20 @@
+{% load static %}
+
+    {% if documents %}
+        <ul>
+        {% for document in documents %}
+            <li><a href="{{ document.docfile.url }}">{{ document.docfile.name }} &nbsp;{{ document.uid }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No documents.</p>
+    {% endif %}
+
+        <!-- Upload form. Note enctype attribute! -->
+        <form action="{% url 'mysite:login' %}" method="post" enctype="multipart/form-data">
+           
+                {{form}}
+                
+            </p>
+            <p><input type="submit" value="Upload" /></p>
+        </form>

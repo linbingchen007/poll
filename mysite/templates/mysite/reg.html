@@ -1,0 +1,20 @@
+{% load static %}
+
+    {% if usrs %}
+        <ul>
+        {% for usr in usrs %}
+            <li>{{ usr.username }} &nbsp; {{usr.idsn}}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No usrs.</p>
+    {% endif %}
+
+        <!-- Upload form. Note enctype attribute! -->
+        <form action="{% url 'mysite:reg' %}" method="post" enctype="multipart/form-data">
+           
+                {{form}}
+                
+            </p>
+            <p><input type="submit" value="Upload" /></p>
+        </form>
