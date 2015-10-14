@@ -24,6 +24,8 @@ class User(models.Model):
 class Question(models.Model):
     id = models.AutoField(primary_key = True)
     text = models.CharField(max_length = 256)
+    st = models.DateTimeField()
+    dt = models.DateTimeField()
 
    
 class Choice(models.Model):

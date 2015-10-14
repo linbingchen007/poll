@@ -1,0 +1,9 @@
+{% include 'mysite/header.html' %}
+{% load static %}
+<div class="container" id="polls">
+    <ul class="list-group">
+    {% for topic in topics %}
+        <li class="list-group-item"><a href="{% url "mysite:poll" topic.id  %}">{{ topic.text }}</a> </li>
+    {% endfor %}
+    </ul>
+</div>

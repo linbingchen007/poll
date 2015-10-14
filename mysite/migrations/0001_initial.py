@@ -35,6 +35,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(serialize=False, primary_key=True)),
                 ('date', models.DateTimeField(default=datetime.datetime.now, db_index=True)),
                 ('docfile', models.FileField(upload_to=mysite.models.pic_path)),
+                ('uid', models.CharField(max_length=20)),
             ],
         ),
         migrations.CreateModel(
@@ -42,6 +43,8 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(serialize=False, primary_key=True)),
                 ('text', models.CharField(max_length=256)),
+                ('st', models.DateTimeField()),
+                ('dt', models.DateTimeField()),
             ],
         ),
         migrations.CreateModel(
@@ -52,7 +55,7 @@ class Migration(migrations.Migration):
                 ('idsn', models.CharField(max_length=30, db_index=True)),
                 ('addr', models.CharField(max_length=256)),
                 ('birth', models.CharField(max_length=50)),
-                ('sex', models.BooleanField(default=False)),
+                ('sex', models.CharField(max_length=10)),
                 ('nation', models.CharField(max_length=30)),
                 ('hashsn', models.CharField(max_length=35, db_index=True)),
             ],
@@ -71,6 +74,14 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(serialize=False, primary_key=True)),
                 ('question', models.ForeignKey(to='mysite.Question')),
                 ('user', models.ForeignKey(to='mysite.User')),
+            ],
+        ),
+        migrations.CreateModel(
+            name='Valid',
+            fields=[
+                ('id', models.AutoField(serialize=False, primary_key=True)),
+                ('uid', models.CharField(max_length=20, db_index=True)),
+                ('key', models.CharField(max_length=33)),
             ],
         ),
         migrations.AddField(

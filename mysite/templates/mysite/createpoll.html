@@ -1,0 +1,40 @@
+{% include 'mysite/header.html' %}
+{% load static %}
+<script>
+    var optid = 0;
+function addtext() {
+    var tmpinput = document.createElement("input");
+    var tmptext = document.createTextNode("CLICK ME");
+    var tmpopttopic = document.createTextNode("选项" + optid + ":");
+    var br = document.createElement("br");
+    tmpinput.appendChild(tmptext);
+    tmpinput.name = 'opt' + optid;
+    optid += 1;
+    var frm = document.getElementById("options");
+    frm.appendChild(tmpopttopic);
+    frm.appendChild(tmpinput);
+    frm.appendChild(br);
+}
+</script>
+
+<div class="container" id = "form">
+    <form class="form-signin" action="{% url 'mysite:createpoll' %}" method="post" >
+
+        标题：<input type="text" name="topic" /> <br>
+        开始时间：
+        日期：<input type="text" name="sdate"  id="sdate">
+        时：<input type="text" name="shour" value="0">
+        分：<input type="text" name="smin" value="0">
+        <br>
+        结束时间：
+        日期：<input type="text" name="tdate"  id="tdate">
+        时： <input type="text" name="thour" value="0">
+        分： <input type="text" name="tmin" value="0">
+        <br>
+        <div id="options">
+
+        </div>
+        <button type="button" onclick="addtext()">添加选项</button>
+        <input type="submit" value="提交" />
+    </form>
+</div>

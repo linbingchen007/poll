@@ -1,0 +1,22 @@
+{% load static  %}
+{% load custom_filter %}
+
+<div class="container">
+    <h2>{{ topic }} 投票结果:</h2>
+    <table>
+        {% for choice in choices %}
+            <tr>
+            <td>{{ choice.text }}</td>
+            <td>
+            <img src="{% static "poll.gif" %}"
+            width='{{ choice.val|mult:100 | div:cnt }}'
+            height='20'>
+            {{ choice.val  }}票
+            </td>
+            </tr>
+        {% endfor %}
+        <br>
+
+    </table>
+    <a href="{% url 'mysite:polls' type=1 %}">返回 </a> <br>
+</div>

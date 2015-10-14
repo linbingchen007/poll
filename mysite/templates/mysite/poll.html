@@ -1,0 +1,33 @@
+{% include 'mysite/header.html' %}
+{% load static %}
+
+<script>
+function getVote(optid) {
+  if (window.XMLHttpRequest) {
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+  } else {  // code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+      document.getElementById("poll").innerHTML=xmlhttp.responseText;
+    }
+  }
+  xmlhttp.open("GET", "/pollvote/{{topic.id}}" + "/" + optid, true);
+  xmlhttp.send();
+}
+</script>
+
+
+
+
+<div class="container" id="poll">
+    <form>
+        <h3>{{ topic.text }}</h3>
+        {% for opt in topic.choices.all %}
+            <input type="radio" name="vote" value="{{ opt.text }}" onclick="getVote({{ opt.id }})" /> {{ opt.text }} <br>
+        {% endfor %}
+        <br>
+    </form>
+</div>

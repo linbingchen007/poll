@@ -1,20 +1,25 @@
+{% include 'mysite/header.html' %}
 {% load static %}
+{% load bootstrap %}
 
-    {% if usrs %}
-        <ul>
-        {% for usr in usrs %}
-            <li>{{ usr.username }} &nbsp; {{usr.idsn}}</li>
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>No usrs.</p>
-    {% endif %}
-
+<div class="container">
+    <div class="container">
+        {% if usrs %}
+            <ul>
+            {% for usr in usrs %}
+                <li>{{ usr.username }} &nbsp; {{usr.idsn}}</li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No usrs.</p>
+        {% endif %}
+    </div>
+    <div class="container">
         <!-- Upload form. Note enctype attribute! -->
         <form action="{% url 'mysite:reg' %}" method="post" enctype="multipart/form-data">
            
                 {{form}}
-                
-            </p>
-            <p><input type="submit" value="Upload" /></p>
+           <input type="submit" class="btn btn-default" value="注册" />
         </form>
+    </div>
+</div>

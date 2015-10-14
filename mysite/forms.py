@@ -11,11 +11,18 @@ class LoginForm(forms.Form):
         )
 
 class RegForm(forms.Form):
-    username = forms.CharField(max_length = 30)
-    idsn = forms.CharField(max_length = 30)
+    username = forms.CharField(max_length = 30, label = "姓名")
+    idsn = forms.CharField(max_length = 30, label = '身份证号')
     #addr = forms.CharField(max_length = 256)
     #birth = forms.CharField(max_length = 50)
     #sex = forms.CharField(max_length = 10)
     #nation = forms.CharField(max_length = 30)
+
+class AdminForm(forms.Form):
+    username = forms.CharField(max_length = 30, label = '用户名')
+    password = forms.CharField(max_length = 30, label = '密码')
+
+
+
     
 
