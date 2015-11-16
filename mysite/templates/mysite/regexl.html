@@ -1,0 +1,13 @@
+{% include 'mysite/manage.html' %}
+{% load static %}
+{% load bootstrap %}
+<div class="container">
+    <form action="{% url 'mysite:regexl' %}" method="post" enctype="multipart/form-data">
+        {{form| bootstrap}}
+        <p><input type="submit"  value="导入" /></p>
+    </form>
+</div>
+
+<style type="text/css">
+    #navregexl {color:red;}
+</style>

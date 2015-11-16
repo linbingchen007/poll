@@ -105,8 +105,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_ROOT='/Users/linbingchen/Desktop/PartDetectSystem/media'
+MEDIA_ROOT='media'
 
 MEDIA_URL = '/media/'
 
-STATIC_ROOT='/Users/linbingchen/Desktop/PartDetectSystem/static'
+STATIC_ROOT='static'
+
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True

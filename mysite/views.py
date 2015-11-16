@@ -9,23 +9,51 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.template import RequestContext, loader
 from django.forms import ModelForm
 from django.core.context_processors import csrf
-import random
-from mysite.forms import LoginForm, RegForm, AdminForm
-from mysite.models import User, Admin, Pic, Question, User_Choice_Rel, User_Question, Valid, Choice
+from mysite.forms import LoginForm, RegForm, AdminForm, RegExlForm
+from mysite.models import User, Admin, Pic, Question, User_Choice_Rel, User_Question, Valid, Choice, Candidate, Var, Log, Exl
 from django.db.models import Q
-import md5
+import md5,string,xlrd,os,random
 from datetime import datetime
 from django.utils import timezone
-DEBUG = False
+DEBUG = True
+
+def getGloVar(key):
+    return Var.objects.all().filter(name = key)[0].val
+
+def setGloVar(key, val):
+    obj = Var.objects.all().filter(name = key)[0]
+    obj.val = val
+    obj.save()
+
+def crypt(key):
+    m1 = md5.new()
+    m1.update(key[0 : len(key) - 1])
+    m1.update(key[1 : len(key)])
+    m1.update(key[1 : len(key) - 1])
+    m1.update(m1.hexdigest())
+    for i in range(len(key) - 1, 0 , -1):
+        m1.update(key[i])
+    m1.update(Var.objects.all().filter(name = "seed")[0].val)
+    return m1.hexdigest()
+
 
 def init(request):
     #删除数据库所有数据
-    Pic.objects.all().delete()
-    User.objects.all().delete()
-    Valid.objects.all().delete()
-    Question.objects.all().delete()
-    Admin.objects.all().delete()
-    Admin(username = "admin", password = "admin").save()
+    if DEBUG :
+        Pic.objects.all().delete()
+        User.objects.all().delete()
+        Valid.objects.all().delete()
+        Question.objects.all().delete()
+        Admin.objects.all().delete()
+        Var.objects.all().delete()
+        Candidate.objects.all().delete()
+        Exl.objects.all().delete()
+        Log.objects.all().delete()
+    if DEBUG or Var.objects.all().filter("bind") == None:
+        Var(name = "authkey", val = "10000").save()
+        Var(name = "bind", val = "0").save()
+        Var(name = "seed", val = ''.join(random.SystemRandom().choice(string.ascii_uppercase + string.digits) for _ in range(10))).save()
+        Admin(username = "admin", password = "admin").save()
     return HttpResponse('OK!')
 
 
@@ -58,6 +86,36 @@ def login(request):
         context_instance=RequestContext(request)
     )
 
+def addVoter(name, idsn, phone):
+    chkobjs = User.objects.all().filter(idsn = idsn)
+    if len(chkobjs) == 0:
+        User(idsn = idsn, username = name, phone = phone).save()
+
+@csrf_exempt
+def regexl(request):
+    if chkAdminCookies(request) == None:
+        return  HttpResponse("无权限查看！")
+    if request.method == 'POST':
+        form = RegExlForm(request.POST, request.FILES)
+        if form.is_valid():
+            for obj in Exl.objects.all():
+                os.remove(obj.docfile.path)
+                obj.delete()
+            newexl = Exl(docfile = request.FILES['docfile'])
+            newexl.save()
+            path = newexl.docfile.path
+            workbook = xlrd.open_workbook(path)
+            worksheet = workbook.sheet_by_index(0)
+            try:
+                for i in range(1,worksheet.nrows):
+                    addVoter(worksheet.cell_value(i,0), worksheet.cell_value(i,1), worksheet.cell_value(i,2))
+                return HttpResponse("导入成功！")
+            except:
+                return HttpResponse("导入异常！")
+    form = RegExlForm()
+    return render_to_response('mysite/regexl.html', {"form": form}, context_instance=RequestContext(request))
+
+
 @csrf_exempt
 def valid(request, key, uid):
     if uid == None or key == None or key == '' or uid == '':
@@ -67,6 +125,8 @@ def valid(request, key, uid):
         if valids[0].key == key:
             return True
     return False
+
+
 
 
 @csrf_exempt
@@ -98,15 +158,10 @@ def reg(request):
 
 def chkAdminCookies(request):
     #检查cookies是否合法
-    username = request.session.get('username', None)
-    password = request.session.get('password', None)
-    if username and password:
-        qry_usrs = Admin.objects.all().filter(
-            username=username).filter(password=password)
-        if len(qry_usrs) == 1:
-            return qry_usrs[0]
-        else:
-            return None
+    key = request.session.get('authkey', None)
+    value = request.session.get('authvalue', None)
+    if key and value and int(key) == int(getGloVar("authkey")) - 1 and crypt(key) == value:
+        return True
     else:
         return None
 
@@ -260,3 +315,98 @@ def polls(request, type, key = None, uid = None):
         "topics" : topics,
     }
     return render_to_response('mysite/polls.html', c, context_instance=RequestContext(request))
+
+def getPageContent(page, objs = None):
+    if objs == None:
+        objs =  User.objects.all()
+    paginator=Paginator(objs,500)
+    try:
+        partcontent=paginator.page(page)
+    except PageNotAnInteger:
+        partcontent=paginator.page(1)
+    except EmptyPage:
+        partcontent=paginator.page(paginator.num_pages)
+    return partcontent
+
+@csrf_exempt
+def voters(request, page = 1):
+    c = {'items':getPageContent(page)}
+    return render_to_response('mysite/voters.html', c, context_instance=RequestContext(request))
+
+@csrf_exempt
+def candidates(request):
+    c = {
+        "candidates" : Candidate.objects.all()
+    }
+    return render_to_response('mysite/candidates.html', c, context_instance=RequestContext(request))
+
+@csrf_exempt
+def getauthkey(request):
+    return HttpResponse(getGloVar("authkey"))
+
+@csrf_exempt
+def getseed(request):
+    if getGloVar("bind") == "0":
+        return HttpResponse(getGloVar("seed"))
+    else:
+        return HttpResponse("已被绑定！")
+
+@csrf_exempt
+def bind(request):
+    if getGloVar("bind") == "0":
+        setGloVar("bind", "1")
+        return HttpResponse("绑定成功！")
+    else:
+        return HttpResponse("已被绑定！")
+
+@csrf_exempt
+def auth(request, key = None, value = None):
+    if key != None and value != None and key == getGloVar("authkey") and crypt(key) == value:
+        request.session["authkey"] = key
+        request.session["authvalue"] = value
+        setGloVar("authkey", str(int(key) + 1))
+        return manage(request)
+    else:
+        return HttpResponse("验证失败！")
+
+@csrf_exempt
+def gopagevoters(request):
+    return voters(request,request.POST['pagenum'])
+
+def getVotersObjs(type, key):
+    if type == 'idsn':
+        return User.objects.all().filter(idsn__contains=key)
+    elif type == 'name':
+        return User.objects.all().filter(username__contains=key)
+
+@csrf_exempt
+def qryvoters(request, page = 1):
+    if chkAdminCookies(request) == None:
+        return  HttpResponse("无权限查看！")
+    objs = None
+    if request.method == 'POST':
+        if 'qrytype' in request.POST:
+            type = request.POST['qrytype']
+            key = request.POST.get('qrykey','')
+            objs = getVotersObjs(type, key)
+            request.session['qryvoterstype'] = type
+            request.session['qryvoterskey'] = key
+        elif 'pagenum' in request.POST:
+            objs = getVotersObjs(request.session['qryvoterstype'], request.session['qryvoterskey'])
+    c = {'items':getPageContent(page, objs),
+         'idsn': True,
+         'phone': True,
+         'del': True,
+         'selected' : request.session.get('qryvoterstype', '')
+         }
+    return render_to_response('mysite/qryvoters.html', c, context_instance=RequestContext(request))
+
+@csrf_exempt
+def delvoter(request, idsn):
+    if chkAdminCookies(request) == None:
+        return  HttpResponse("无权限查看！")
+    User.objects.all().filter(idsn = idsn)[0].delete()
+    return qryvoters(request)
+
+
+

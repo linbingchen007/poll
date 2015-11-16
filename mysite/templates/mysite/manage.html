@@ -3,8 +3,9 @@
 <div class="container">
     {% for topic in topics %}
         {{ topic.text }}:&nbsp;
-        {{ topic.st }}
-        {{ topic.dt }}
+        {{ topic.st |date:'Y-m-d H:i' }}
+        ~
+        {{ topic.dt |date:'Y-m-d H:i'}}
         {% for opt in topic.choices.all %}
             {{ opt.text }}&nbsp;{% if not forloop.last %}, {% endif %}
         {% endfor %}
@@ -14,8 +15,11 @@
       <div class="container">
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li> <a href="{% url 'mysite:createpoll' %}"> 发起投票 </a> </li>
-            <li> <a href="{% url 'mysite:reg' %}"> 注册用户 </a> </li>
+            <li> <a href="{% url 'mysite:createpoll' %}" id="navcreatepoll"> 发起投票 </a> </li>
+            <li> <a href="{% url 'mysite:reg' %}" id="navreg"> 注册选民 </a> </li>
+            <li> <a href="{% url 'mysite:regexl' %}" id="navregexl"> 导入选民数据 </a> </li>
+            <li> <a href="{% url 'mysite:qryvoters' %}" id="navqryvoters"> 查询选民 </a> </li>
+            <li> <a href=""> 编辑候选人 </a> </li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->
@@ -23,3 +27,7 @@
 
 
 </div>
+<style type="text/css">
+    #navadmin {color:red;}
+</style>
+

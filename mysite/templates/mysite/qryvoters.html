@@ -1,0 +1,25 @@
+{% include 'mysite/manage.html' %}
+{% load static %}
+{% load bootstrap %}
+<div class="container">
+    <form action="{% url "mysite:qryvoters" %}" class="form-horizontal" method="post" >
+        <div class="input-group">
+            <div class="input-group-btn search-panel">
+                <select name="qrytype" style="font-size: large;">
+                    <option value="idsn" {% if selected == "idsn" %} selected="selected" {% endif %}>身份证:</option>
+                    <option value="name" {% if selected == "name" %} selected="selected" {% endif %}>姓名:</option>
+                </select>
+                &nbsp;
+            </div>
+            <input type="text" class="form-control" name="qrykey" placeholder="搜索关键词" id="search_key" value="">
+            <span class="input-group-btn">
+                <button class="btn btn-info" type="submit">  查询  </button>
+            </span>
+        </div>
+    </form>
+</div>
+{% include 'mysite/listtemplate.html' %}
+
+<style type="text/css">
+    #navqryvoters {color:red;}
+</style>

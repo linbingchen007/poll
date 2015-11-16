@@ -1,19 +1,9 @@
-{% include 'mysite/header.html' %}
+{% include 'mysite/manage.html' %}
 {% load static %}
 {% load bootstrap %}
 
 <div class="container">
-    <div class="container">
-        {% if usrs %}
-            <ul>
-            {% for usr in usrs %}
-                <li>{{ usr.username }} &nbsp; {{usr.idsn}}</li>
-            {% endfor %}
-            </ul>
-        {% else %}
-            <p>No usrs.</p>
-        {% endif %}
-    </div>
+
     <div class="container">
         <!-- Upload form. Note enctype attribute! -->
         <form action="{% url 'mysite:reg' %}" method="post" enctype="multipart/form-data">
@@ -23,3 +13,6 @@
         </form>
     </div>
 </div>
+<style type="text/css">
+    #navreg {color:red;}
+</style>

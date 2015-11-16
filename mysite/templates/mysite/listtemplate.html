@@ -1,0 +1,60 @@
+{% load static %}
+{% load bootstrap %}
+
+<div class="container" id="voters">
+	<div class="row">
+		<div class="span5">
+            <table class="table table-striped table-condensed">
+                <thead>
+                    <tr>
+                        <th>姓名</th>
+                        {% if idsn %}
+                            <th>身份证号</th>
+                        {% endif %}
+                        {% if phone %}
+                            <th>手机号</th>
+                        {% endif %}
+                        {% if del %}
+                            <th>操作</th>
+                        {% endif %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for voter in items %}
+                        <tr>
+                            <th>{{voter.username}}</th>
+                            {% if idsn %}
+                                <th>{{voter.idsn}}</th>
+                            {% endif %}
+                            {% if phone %}
+                                <th>{{voter.phone}}</th>
+                            {% endif %}
+                            {% if phone %}
+                                <th><a class="btn btn-danger" href="{% url 'mysite:delvoter' voter.idsn %}">删除</a></th>
+                            {% endif %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="container">
+        <div class="container" style="text-align: center;">
+            {% if items.has_previous %}
+                <a href="{% url "mysite:voters" items.previous_page_number %}" class="btn btn-info" ><font size="3" >上一页</font></a>
+            {% endif %}
+
+        <font size="4">  &nbsp;&nbsp; {{ items.number }}/{{ items.paginator.num_pages }} &nbsp;&nbsp; </font>
+
+            {% if items.has_next %}
+                <a href="{% url "mysite:voters" items.next_page_number %}" class="btn btn-info"> <font size="3">下一页</font></a>
+            {% endif %}
+            <br>
+        </div>
+        <form action="{% url "mysite:gopagevoters" %}" class="form-horizontal" method="post" style="text-align: center;">
+            第 <input type="text" name="pagenum" style="width:30px;">  页
+            <input type="submit" class="btn btn-default" value="进入">
+
+        </form>
+    </div>
+</div>
