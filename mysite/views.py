@@ -352,12 +352,12 @@ def getseed(request):
         return HttpResponse("已被绑定！")
 
 @csrf_exempt
-def bind(request):
+def bind(request, seed):
     if getGloVar("bind") == "0":
-        setGloVar("bind", "1")
-        return HttpResponse("绑定成功！")
-    else:
-        return HttpResponse("已被绑定！")
+        if seed == getGloVar("seed"):
+            setGloVar("bind", "1")
+            return HttpResponse("1")
+    return HttpResponse("0")
 
 @csrf_exempt
 def auth(request, key = None, value = None):
