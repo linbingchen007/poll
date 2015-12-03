@@ -2,19 +2,33 @@
 {% load static %}
 <script>
     var optid = 0;
-function addtext() {
-    var tmpinput = document.createElement("input");
-    var tmptext = document.createTextNode("CLICK ME");
-    var tmpopttopic = document.createTextNode("选项" + optid + ":");
-    var br = document.createElement("br");
-    tmpinput.appendChild(tmptext);
-    tmpinput.name = 'opt' + optid;
-    optid += 1;
-    var frm = document.getElementById("options");
-    frm.appendChild(tmpopttopic);
-    frm.appendChild(tmpinput);
-    frm.appendChild(br);
-}
+    var optid2 = 0;
+    function addopt() {
+        var tmpinput = document.createElement("input");
+        var tmptext = document.createTextNode("CLICK ME");
+        var tmpopttopic = document.createTextNode("选项" + optid + ":");
+        var br = document.createElement("br");
+        tmpinput.appendChild(tmptext);
+        tmpinput.name = 'opt' + optid;
+        optid += 1;
+        var frm = document.getElementById("options");
+        frm.appendChild(tmpopttopic);
+        frm.appendChild(tmpinput);
+        frm.appendChild(br);
+    }
+    function addopt2() {
+        var tmpinput = document.createElement("input");
+        var tmptext = document.createTextNode("CLICK ME");
+        var tmpopttopic = document.createTextNode("选项" + optid2 + ":");
+        var br = document.createElement("br");
+        tmpinput.appendChild(tmptext);
+        tmpinput.name = 'opta' + optid2;
+        optid2 += 1;
+        var frm = document.getElementById("options2");
+        frm.appendChild(tmpopttopic);
+        frm.appendChild(tmpinput);
+        frm.appendChild(br);
+    }
 </script>
 
 <div class="container" id = "form">
@@ -35,10 +49,22 @@ function addtext() {
         &nbsp
         分： <input type="text" name="tmin" value="0">
         <br>
+        预定选出的委员数量：
+        <input type="text" name="commitcnt" value="1">
+        <br>
         <div id="options">
-
+            <font color="red"> 村长候选人列表：<br>
+            </font>
         </div>
-        <button type="button" class="btn btn-default" onclick="addtext()">添加选项</button>
+        <button type="button" class="btn btn-default" onclick="addopt()"> 添加村长候选人
+        </button>
+        <div id="options2">
+            <font color="red"> 委员候选人列表：<br>
+            </font>
+        </div>
+        <button type="button" class="btn btn-default" onclick="addopt2()"> 添加委员候选人
+        </button>
+        <br>
         <input type="submit" class="btn btn-default" value="提交" />
     </form>
 </div>

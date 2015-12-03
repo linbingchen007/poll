@@ -1,8 +1,9 @@
-{% load static  %}
+{% include 'mysite/manage.html' %}
+{% load static %}
 {% load custom_filter %}
 
 <div class="container">
-    <h2>{{ topic }} 投票结果:</h2>
+    <h2>{{ topic }} 村长竞选结果:</h2>
     <table>
         {% for choice in choices %}
             <tr>
@@ -18,5 +19,26 @@
         <br>
 
     </table>
-    <a href="{% url 'mysite:polls' type=1 %}">返回 </a> <br>
 </div>
+<div class="container">
+    <h2>{{ topic }} 委员竞选结果:</h2>
+    <table>
+        {% for choice in choices2 %}
+            <tr>
+            <td>{{ choice.text }}</td>
+            <td>
+            <img src="{% static "poll.gif" %}"
+            width='{{ choice.val|mult:100 | div:cnt2 }}'
+            height='20'>
+            {{ choice.val  }}票
+            </td>
+            </tr>
+        {% endfor %}
+        <br>
+
+    </table>
+</div>
+
+<style type="text/css">
+    #navadminpolls {color:red;}
+</style>

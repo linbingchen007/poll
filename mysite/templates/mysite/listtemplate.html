@@ -14,6 +14,9 @@
                         {% if phone %}
                             <th>手机号</th>
                         {% endif %}
+                        {% if pwd %}
+                            <th>验证码</th>
+                        {% endif %}
                         {% if del %}
                             <th>操作</th>
                         {% endif %}
@@ -29,7 +32,10 @@
                             {% if phone %}
                                 <th>{{voter.phone}}</th>
                             {% endif %}
-                            {% if phone %}
+                            {% if pwd %}
+                                <th>{{ voter.pwd }}</th>
+                            {% endif %}
+                            {% if del %}
                                 <th><a class="btn btn-danger" href="{% url 'mysite:delvoter' voter.idsn %}">删除</a></th>
                             {% endif %}
                         </tr>

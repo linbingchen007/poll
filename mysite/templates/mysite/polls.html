@@ -1,12 +1,28 @@
-{% include 'mysite/header.html' %}
+{% if closedFg %}
+    {% include 'mysite/manage.html' %}
+{% else %}
+    {% include 'mysite/header.html' %}
+{% endif %}
 {% load static %}
 <div class="container" id="polls">
     <ul class="list-group">
     {% for topic in topics %}
-        <li class="list-group-item"><a href="{% url "mysite:poll" topic.id  %}">{{ topic.text }}</a> </li>
+        <li class="list-group-item"><a href="{% url "mysite:poll" topic.id  %}">{{ topic.text }}</a>
+        &nbsp; &nbsp; 已投{{ topic.pollcnt }}票
+        {% if closedFg %}
+        &nbsp; &nbsp;
+        <a href="{% url "mysite:pollresult" topic.id  %}">［查看投票结果]</a>
+        {% endif %}
+        </li>
     {% endfor %}
     </ul>
 </div>
-<style type="text/css">
-    #navopen {color:red;}
-</style>
+{% if closedFg %}
+    <style type="text/css">
+        #navadminpolls {color:red;}
+    </style>
+{% else %}
+    <style type="text/css">
+        #navopen {color:red;}
+    </style>
+{% endif %}

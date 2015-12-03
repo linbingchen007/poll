@@ -2,6 +2,16 @@
 {% load static %}
 
 <script>
+    jQuery(function(){
+    var limit = 3;
+    $('input.single-checkbox').on('change', function(evt) {
+       if($(this).siblings(':checked').length >= {{ topic.commitcnt }}) {
+           this.checked = false;
+       }
+    });
+});
+
+
 function getVote(optid) {
   if (window.XMLHttpRequest) {
     // code for IE7+, Firefox, Chrome, Opera, Safari
@@ -23,11 +33,21 @@ function getVote(optid) {
 
 
 <div class="container" id="poll">
-    <form>
+    <form class="form-poll" action="{% url 'mysite:pollvote' %}" method="post" enctype="multipart/form-data">
         <h3>{{ topic.text }}</h3>
+        <div id="cz">
+        选村长(单选)：<br>
         {% for opt in topic.choices.all %}
-            <input type="radio" name="vote" value="{{ opt.text }}" onclick="getVote({{ opt.id }})" /> {{ opt.text }} <br>
+            <input type="radio" name="vote" value="{{ opt.id }}" /> {{ opt.text }} <br>
         {% endfor %}
         <br>
+        </div>
+        <div id="wy">
+        选村长(最多选{{ topic.commitcnt }}个)：<br>
+        {% for opt in topic.choices2.all %}
+            <input type="checkbox" class="single-checkbox" name="checkbox{{ opt.id }}" value="{{ opt.text }}" /> {{ opt.text }} <br>
+        {% endfor %}
+        </div>
+        <input type="submit" class="btn btn-default" value="提交" />
     </form>
 </div>
