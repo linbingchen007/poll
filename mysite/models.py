@@ -41,8 +41,10 @@ class User(models.Model):
 class Question(models.Model):
     id = models.AutoField(primary_key = True)
     text = models.CharField(max_length = 256)
+    pollcnt = models.IntegerField(default=0)
     st = models.DateTimeField()
     dt = models.DateTimeField()
+    commitcnt = models.IntegerField(default = 1)
 
    
 class Choice(models.Model):
@@ -51,10 +53,21 @@ class Choice(models.Model):
     text = models.CharField(max_length = 256)
     val = models.IntegerField(default = 0)
 
+class Choice2(models.Model):
+    id = models.AutoField(primary_key = True)
+    question = models.ForeignKey(Question, related_name='choices2')
+    text = models.CharField(max_length = 256)
+    val = models.IntegerField(default = 0)
+
 class User_Choice_Rel(models.Model):
     id = models.AutoField(primary_key = True)
     user = models.ForeignKey(User)
     choice = models.ForeignKey(Choice)
+
+class User_Choice2_Rel(models.Model):
+    id = models.AutoField(primary_key = True)
+    user = models.ForeignKey(User)
+    choice2 = models.ForeignKey(Choice2)
 
 class User_Question(models.Model):
     id = models.AutoField(primary_key = True)

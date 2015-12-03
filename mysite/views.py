@@ -9,8 +9,9 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.template import RequestContext, loader
 from django.forms import ModelForm
 from django.core.context_processors import csrf
-from mysite.forms import LoginForm, RegForm, AdminForm, RegExlForm
-from mysite.models import User, Admin, Pic, Question, User_Choice_Rel, User_Question, Valid, Choice, Candidate, Var, Log, Exl
+from mysite.forms import LoginForm, RegForm, AdminForm, RegExlForm, LoginpwdForm
+from mysite.models import User, Admin, Pic, Question, User_Choice_Rel, User_Choice2_Rel, User_Question, Valid, Choice, \
+    Choice2, Candidate, Var, Log, Exl
 from django.db.models import Q
 import md5,string,xlrd,os,random
 from datetime import datetime
@@ -117,9 +118,17 @@ def regexl(request):
 
 
 @csrf_exempt
-def valid(request, key, uid):
-    if uid == None or key == None or key == '' or uid == '':
+def valid(request, key, uid, pwd = None):
+    if (uid == None or uid == "") :
         return False
+    if  ( (key == None or key == "") and (pwd == None or pwd == "")):
+        return False
+    if pwd != None and pwd != "":
+        qryRes = User.objects.all().filter(idsn = uid).filter(pwd = pwd)
+        if qryRes != None and len(qryRes) > 0:
+            return True
+        else:
+            return False
     valids = Valid.objects.all().filter(uid = uid)
     if len(valids) >= 1:
         if valids[0].key == key:
@@ -146,8 +155,7 @@ def reg(request):
             newusr = User(
                 username=request.POST['username'], idsn=request.POST['idsn'])
             newusr.save()
-            return HttpResponse(username)
-            #return HttpResponseRedirect(reverse('mysite:reg'))
+            return HttpResponseRedirect(reverse('mysite:reg'))
     form = RegForm()
     usrs = User.objects.all()
     c = {
@@ -157,6 +165,8 @@ def reg(request):
     return render_to_response('mysite/reg.html', c, context_instance=RequestContext(request))
 
 def chkAdminCookies(request):
+    if DEBUG == True:
+        return True
     #检查cookies是否合法
     key = request.session.get('authkey', None)
     value = request.session.get('authvalue', None)
@@ -212,6 +222,7 @@ def createpoll(request):
         smin = int(request.POST['smin'])
         thour = int(request.POST['thour'])
         tmin = int(request.POST['tmin'])
+        commitcnt = int(request.POST['commitcnt'])
         try:
             st = datetime(
                 year = int( sdate_list[0]), month = int(sdate_list[1]), day = int(sdate_list[2]), hour = shour, minute = smin)
@@ -221,13 +232,22 @@ def createpoll(request):
             return HttpResponse("非法日期")
         if len(Question.objects.all().filter(text = topic)) != 0:
             return HttpResponse("不要创建标题重复的投票")
-        question = Question(text = topic, st = st, dt = dt)
+        question = Question(text = topic, st = st, dt = dt, commitcnt = commitcnt)
         question.save()
         while True:
             key = "opt" + str(i)
             if key in request.POST:
                 opt = request.POST[key]
                 Choice(question = question, text = opt).save()
+                i += 1
+            else:
+                break
+        i = 0
+        while True:
+            key = "opta" + str(i)
+            if key in request.POST:
+                opt = request.POST[key]
+                Choice2(question = question, text = opt).save()
                 i += 1
             else:
                 break
@@ -248,17 +268,35 @@ def canbevoted(topicid, uid):
     else:
         return False
 
+def isTopicClosed(topicId):
+    timeNow = timezone.now()
+    qryRes = Question.objects.all().filter(Q(st__gt = timeNow) | Q(dt__lte = timeNow)).filter(id = topicId)
+    if qryRes == None or len(qryRes) == 0:
+        return False
+    else:
+        return True
+
 @csrf_exempt
-def pollResult(request, topicid):
+def pollresult(request, topicid):
+    if chkAdminCookies(request) == None:
+        return  HttpResponse("无权限查看！")
     topic = Question.objects.all().filter(id = topicid)[0]
+    if DEBUG == False and isTopicClosed(topic.id) == False:
+        return HttpResponse("投票尚未结束，不能查看结果")
     choices = topic.choices.all()
+    choices2 = topic.choices2.all()
     cnt = 0
+    cnt2 = 0
     for choice in choices:
         cnt += choice.val
+    for choice in choices2:
+        cnt2 += choice.val
     c = {
         "topic" : topic.text,
         "cnt" : cnt,
         "choices" : choices,
+        "cnt2" : cnt2,
+        "choices2" : choices2,
     }
     return render_to_response('mysite/pollresult.html', c, context_instance=RequestContext(request))
 
@@ -268,33 +306,52 @@ def poll(request, topicid):
     topics = Question.objects.all().filter(id = topicid)
     if len(topics) > 0 and \
             (DEBUG or \
-            (valid(request, request.session.get('key',None), request.session.get('uid',None)) and canbevoted(topicid, request.session.get('uid',None)))):
+            (valid(request, request.session.get('key', None), request.session.get('uid', None), request.session.get('pwd', None)) and canbevoted(topicid, request.session.get('uid',None)))):
         c = {
             "topic" : topics[0],
         }
+        request.session["topicid"] = topics[0].id
         return render_to_response('mysite/poll.html', c, context_instance=RequestContext(request))
     else:
-        return pollResult(request, topics[0].id)
+        return HttpResponse("您已经投过票了，或者您无权查看投票结果")
 
 @csrf_exempt
-def pollvote(request, topicid, optid):
-    if DEBUG or \
-            (valid(request, request.session.get('key',None), request.session.get('uid',None)) and canbevoted(topicid, request.session.get('uid',None))):
+def pollvote(request, topicid = None, optid = None):
+    if topicid == None and optid == None and request.method == 'POST' :
+        topicid = request.session.get("topicid", None)
+        if not (topicid != None  and valid(request, request.session.get('key', None), request.session.get('uid', None), request.session.get('pwd', None)) and canbevoted(topicid, request.session.get('uid',None))):
+            return HttpResponse("未知错误")
         topic = Question.objects.all().filter(id = topicid)[0]
         choices = topic.choices.all()
+        optid = int(request.POST['vote'])
+        user = User.objects.all().filter(idsn = request.session.get('uid', None))[0]
         curChoice = choices.filter(id = optid)[0]
-        curChoice.val += 1
-        curChoice.save()
-        user = User.objects.all().filter(idsn = request.session.get('uid',None))[0]
-        User_Question(user = user, question = topic).save()
-        User_Choice_Rel(user = user, choice = curChoice).save()
-        return pollResult(request, topicid)
+        qryRes = User_Choice_Rel.objects.filter(user = user).filter(choice = curChoice)
+        if qryRes == None or len(qryRes) == 0:
+            curChoice.val += 1
+            curChoice.save()
+            User_Choice_Rel(user = user, choice = curChoice).save()
+        choices2 = topic.choices2.all()
+        for choice in choices2:
+            if "checkbox" + str(choice.id) in request.POST:
+                qryRes = User_Choice2_Rel.objects.filter(user = user).filter(choice2 = choice)
+                if qryRes == None or len(qryRes) == 0:
+                    choice.val += 1
+                    choice.save()
+                    User_Choice2_Rel(user = user, choice2 = choice).save()
+        qryRes = User_Question.objects.filter(user = user).filter(question = topic)
+        if qryRes == None or len(qryRes) == 0:
+            topic.pollcnt += 1
+            topic.save()
+            User_Question(user = user, question = topic).save()
+
+        return HttpResponse("投票成功")
     else:
         return HttpResponse("已经投过票或者投票主题不存在！")
 
 @csrf_exempt
-def polls(request, type, key = None, uid = None):
-    if not chkAdminCookies(request) and not valid(request, key or request.session.get('key', None), uid or request.session.get('uid', None)):
+def polls(request, type = 1, key = None, uid = None):
+    if not chkAdminCookies(request) and not valid(request, key or request.session.get('key', None), uid or request.session.get('uid', None), request.session.get('pwd', None)):
         return HttpResponse('没有权限查看！')
     if key != None and uid != None:
         request.session['key'] = key
@@ -305,16 +362,17 @@ def polls(request, type, key = None, uid = None):
     except:
         return HttpResponse("type error!")
     timeNow = timezone.now()
+    c = {}
     if itype == 0: #all
         topics = Question.objects.all()
     elif itype == 1: #open
         topics = Question.objects.all().filter(st__lte = timeNow).filter(dt__gt = timeNow)
     else:
         topics = Question.objects.all().filter(Q(st__gt = timeNow) | Q(dt__lte = timeNow))
-    c = {
-        "topics" : topics,
-    }
+        c["closedFg"] = True
+    c["topics"] = topics
     return render_to_response('mysite/polls.html', c, context_instance=RequestContext(request))
+
 
 def getPageContent(page, objs = None):
     if objs == None:
@@ -396,6 +454,7 @@ def qryvoters(request, page = 1):
     c = {'items':getPageContent(page, objs),
          'idsn': True,
          'phone': True,
+         'pwd': True,
          'del': True,
          'selected' : request.session.get('qryvoterstype', '')
          }
@@ -408,5 +467,23 @@ def delvoter(request, idsn):
     User.objects.all().filter(idsn = idsn)[0].delete()
     return qryvoters(request)
 
+@csrf_exempt
 
+@csrf_exempt
+def loginpwd(request):
+    if request.method == 'POST':
+        form = LoginpwdForm(request.POST)
+        if form.is_valid():
+            uid = request.POST['idsn']
+            pwd = request.POST['pwd']
+            if len(User.objects.all().filter(idsn = uid).filter(pwd = pwd)) >= 1 :
+                request.session['uid'] = uid
+                request.session['pwd'] = pwd
+                return polls(request, 1)
+    form = LoginpwdForm()
+    return render_to_response(
+        'mysite/loginpwd.html',
+        {'form': form},
+        context_instance=RequestContext(request)
+    )
 

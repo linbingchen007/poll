@@ -23,6 +23,10 @@ class RegForm(forms.Form):
     #sex = forms.CharField(max_length = 10)
     #nation = forms.CharField(max_length = 30)
 
+class LoginpwdForm(forms.Form):
+    idsn = forms.CharField(max_length = 30, label = '身份证号')
+    pwd = forms.CharField(max_length=30, label = '验证码')
+
 class AdminForm(forms.Form):
     username = forms.CharField(max_length = 30, label = '用户名')
     password = forms.CharField(max_length = 30, label = '密码')
