@@ -1,0 +1,28 @@
+{% include 'mysite/header.html' %}
+{% load static %}
+<div class="container" xmlns="http://www.w3.org/1999/html">
+    {% if obj %}
+        <p>姓名：{{ obj.name }}</p>
+        <p>头像：<img src="{{obj.picfile.url}}" width="70" height="100" alt="Some image"></p>
+        <p>竞选类型：
+            {% if obj.eletype == 0 %}
+                委员
+            {% else %}
+                主任
+            {% endif %}
+        </p>
+        <p>政治面貌：{{ obj.politics }}</p>
+        <p>性别：{{ obj.sex }}</p>
+        <p>出生年份：{{ obj.birthyear }}</p>
+        <p>学历：{{ obj.backgroud }}</p>
+        <p>民族：{{ obj.nation }}</p>
+        {% if obj.eletype == 1 %}
+            <p>竞选视频：{{ obj.videourl|safe }}</p>
+        {% endif %}
+        <p>其他说明：{{ obj.othertext }}</p>
+    {% endif %}
+     <p><a  class="btn btn-default" href="{% url "mysite:candidates" %}">返回</a></p>
+</div>
+<style type="text/css">
+    #navcandidates {color:red;}
+</style>

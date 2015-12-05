@@ -1,4 +1,4 @@
-
+# -*- coding: utf-8 -*-
 from django.db import models
 from datetime import datetime
 import random,string
@@ -87,12 +87,18 @@ class Valid(models.Model):
 
 class Candidate(models.Model):
     id = models.AutoField(primary_key = True)
+    # 0 委员 1 主任
+    eletype = models.IntegerField(default = 0)
     name = models.CharField(max_length = 30)
     picfile = models.FileField(upload_to = candidatepic_path)
+    sex = models.CharField(max_length = 6, default = "男")
+    birthyear = models.IntegerField(default = 0)
+    backgroud = models.CharField(max_length = 8, default = "小学")
+    nation = models.CharField(max_length = 16, default = "汉族")
     videourl = models.CharField(max_length = 256)
-    profile = models.TextField()
-    votetext = models.TextField()
-    eletype = models.IntegerField(default = 0) # 0 chun zhang 1 wei yuan
+    politics = models.CharField(max_length = 12, default = "群众")
+    othertext = models.TextField()
+
 
 class Var(models.Model):
     name = models.CharField(max_length = 10, primary_key = True)
@@ -102,6 +108,10 @@ class Log(models.Model):
     id = models.AutoField(primary_key = True)
     time = models.DateTimeField(max_length = 10, db_index = True, default=datetime.now)
     action = models.CharField(max_length = 256)
+
+class Text(models.Model):
+    id = models.IntegerField(primary_key = True)
+    content = models.TextField()
 
 
     

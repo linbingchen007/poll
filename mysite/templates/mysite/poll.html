@@ -11,29 +11,38 @@
     });
 });
 
-
-function getVote(optid) {
-  if (window.XMLHttpRequest) {
-    // code for IE7+, Firefox, Chrome, Opera, Safari
-    xmlhttp=new XMLHttpRequest();
-  } else {  // code for IE6, IE5
-    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-  xmlhttp.onreadystatechange=function() {
-    if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-      document.getElementById("poll").innerHTML=xmlhttp.responseText;
+    function validate(form) {
+        var valid = confirm('投票之后无法修改，请谨慎进行投票！！！！')
+        if(!valid) {
+            return false;
+        }
+        else {
+            return confirm('这是最后一次警告，点击确定后进行投票操作！！！');
+        }
     }
-  }
-  xmlhttp.open("GET", "/pollvote/{{topic.id}}" + "/" + optid, true);
-  xmlhttp.send();
-}
+
+    function getVote(optid) {
+      if (window.XMLHttpRequest) {
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
+      } else {  // code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      xmlhttp.onreadystatechange=function() {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+          document.getElementById("poll").innerHTML=xmlhttp.responseText;
+        }
+      }
+      xmlhttp.open("GET", "/pollvote/{{topic.id}}" + "/" + optid, true);
+      xmlhttp.send();
+    }
 </script>
 
 
 
 
 <div class="container" id="poll">
-    <form class="form-poll" action="{% url 'mysite:pollvote' %}" method="post" enctype="multipart/form-data">
+    <form onsubmit="return validate(this);" class="form-poll" action="{% url 'mysite:pollvote' %}" method="post" enctype="multipart/form-data">
         <h3>{{ topic.text }}</h3>
         <div id="cz">
         选村长(单选)：<br>

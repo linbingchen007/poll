@@ -1,0 +1,9 @@
+{% include 'mysite/header.html' %}
+{% load bootstrap %}
+{% load static %}
+
+<meta http-equiv="refresh" content="3;url={% url backurl %}">
+<div class="container">
+    <h4 align="center"> {{ msginf }}</h4>
+    <h6 align="center">3秒之后自动返回</h6>
+</div>

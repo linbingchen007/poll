@@ -2,16 +2,21 @@
 {% load bootstrap %}
 {% load static %}
 
+{% if uid %}
+    <div class="container">
+        <a href="{% url "mysite:clearlogincookies" %}">用户{{ uid }}您已经登陆，点此退出</a>
+    </div>
+{% else %}
+    <div class="container">
+        <form action="{% url 'mysite:loginpwd' %}" method="post">
 
-<div class="container">
-    <form action="{% url 'mysite:loginpwd' %}" method="post">
+                {{form.as_p}}
 
-            {{form | bootstrap}}
-
-        </p>
-        <p><input type="submit" value="登陆" /></p>
-    </form>
-</div>
+            </p>
+            <p><input type="submit" class="btn btn-default" value="登陆" /></p>
+        </form>
+    </div>
+{% endif %}
 
 <style type="text/css">
     #navloginpwd {color:red;}

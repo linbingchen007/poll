@@ -18,10 +18,10 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li> <a href="{% url 'mysite:polls' type=1 %}">Home</a></li>
+            <li> <a href="{% url 'mysite:polls' type=1 %}">主页</a></li>
             <li > <a id="navloginpwd" href="{% url 'mysite:loginpwd' %}">选民入口 </a> </li>
-            <li > <a id="navorg" href="">选举机构 </a> </li>
-            <li > <a id="navtxt" href="">选举方案 </a> </li>
+            <li > <a id="navtextorg" href="{% url "mysite:gettext" 0 %}">选举机构 </a> </li>
+            <li > <a id="navtextpln" href="{% url "mysite:gettext" 1 %}">选举方案 </a> </li>
             <li > <a id="navcandidates" href="{% url "mysite:candidates" %}">候选人名单 </a> </li>
             <li > <a id="navvoters" href="{% url "mysite:voters" %}">选民名单 </a> </li>
             <li > <a id="navopen" href="{% url 'mysite:polls' type=1 %}">进行的投票 </a> </li>

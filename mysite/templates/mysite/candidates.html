@@ -1,12 +1,30 @@
 {% include 'mysite/header.html' %}
 {% load static %}
-<div class="container" id="candidates">
-    <ul class="list-group">
-    {% for candidate in candidates %}
-        <li class="list-group-item">{{ candidate.username }} </li>
+<div class="container">
+    <p>村长候选人:</p>
+
+    {% for candidate in candidates1 %}
+        <div id="candidates" style="float:left;padding-left: 20pt">
+            <a href="{% url "mysite:candidate" candidate.id %}">
+                <img src="{{candidate.picfile.url}}" width="70" height="100" alt="Some image">
+                <p>{{ candidate.name }}</p>
+            </a>
+        </div>
     {% endfor %}
-    </ul>
 </div>
+<br> <br>
+<div class="container">
+    <p>委员候选人:</p>
+    {% for candidate in candidates0 %}
+        <div id="candidates" style="float:left;padding-left: 20pt">
+            <a href="{% url "mysite:candidate" candidate.id %}">
+                <img src="{{candidate.picfile.url}}" width="70" height="100" alt="Some image">
+                <p>{{ candidate.name }}</p>
+            </a>
+        </div>
+    {% endfor %}
+</div>
+
 <style type="text/css">
     #navcandidates {color:red;}
 </style>

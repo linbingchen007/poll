@@ -8,6 +8,9 @@
                 <thead>
                     <tr>
                         <th>姓名</th>
+                        {% if eleltype  %}
+                            <th>竞选职位</th>
+                        {% endif %}
                         {% if idsn %}
                             <th>身份证号</th>
                         {% endif %}
@@ -25,7 +28,26 @@
                 <tbody>
                     {% for voter in items %}
                         <tr>
-                            <th>{{voter.username}}</th>
+                            {% if name %}
+                                <th>
+                                    {% if pic %}
+                                        <img src="{{voter.picfile.url}}" width="70" height="100" alt="Some image">
+                                    {% endif %}
+                                    {{voter.name}}
+                                </th>
+                            {% endif %}
+                            {% if username %}
+                                <th>{{voter.username}}</th>
+                            {% endif %}
+                            {% if eleltype  %}
+                                <th>
+                                    {% if voter.eletype == 0 %}
+                                        委员
+                                    {% else %}
+                                        主任
+                                    {% endif %}
+                                </th>
+                            {% endif %}
                             {% if idsn %}
                                 <th>{{voter.idsn}}</th>
                             {% endif %}
@@ -36,7 +58,7 @@
                                 <th>{{ voter.pwd }}</th>
                             {% endif %}
                             {% if del %}
-                                <th><a class="btn btn-danger" href="{% url 'mysite:delvoter' voter.idsn %}">删除</a></th>
+                                <th><a class="btn btn-danger" href="{% url delurl voter.id %}">删除</a></th>
                             {% endif %}
                         </tr>
                     {% endfor %}
@@ -47,17 +69,17 @@
     <div class="container">
         <div class="container" style="text-align: center;">
             {% if items.has_previous %}
-                <a href="{% url "mysite:voters" items.previous_page_number %}" class="btn btn-info" ><font size="3" >上一页</font></a>
+                <a href="{% url listurl items.previous_page_number %}" class="btn btn-info" ><font size="3" >上一页</font></a>
             {% endif %}
 
         <font size="4">  &nbsp;&nbsp; {{ items.number }}/{{ items.paginator.num_pages }} &nbsp;&nbsp; </font>
 
             {% if items.has_next %}
-                <a href="{% url "mysite:voters" items.next_page_number %}" class="btn btn-info"> <font size="3">下一页</font></a>
+                <a href="{% url listurl items.next_page_number %}" class="btn btn-info"> <font size="3">下一页</font></a>
             {% endif %}
             <br>
         </div>
-        <form action="{% url "mysite:gopagevoters" %}" class="form-horizontal" method="post" style="text-align: center;">
+        <form action="{% url listurl %}" class="form-horizontal" method="post" style="text-align: center;">
             第 <input type="text" name="pagenum" style="width:30px;">  页
             <input type="submit" class="btn btn-default" value="进入">
 

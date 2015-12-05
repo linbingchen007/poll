@@ -1,12 +1,13 @@
 {% include 'mysite/manage.html' %}
 {% load static %}
+{% with initoptid=0 initoptid2=0 %}
 <script>
-    var optid = 0;
-    var optid2 = 0;
+    var optid = {{ cnt1 }};
+    var optid2 = {{ cnt0 }};
     function addopt() {
         var tmpinput = document.createElement("input");
         var tmptext = document.createTextNode("CLICK ME");
-        var tmpopttopic = document.createTextNode("选项" + optid + ":");
+        var tmpopttopic = document.createTextNode("选项" + optid + "：");
         var br = document.createElement("br");
         tmpinput.appendChild(tmptext);
         tmpinput.name = 'opt' + optid;
@@ -19,7 +20,7 @@
     function addopt2() {
         var tmpinput = document.createElement("input");
         var tmptext = document.createTextNode("CLICK ME");
-        var tmpopttopic = document.createTextNode("选项" + optid2 + ":");
+        var tmpopttopic = document.createTextNode("选项" + optid2 + "：");
         var br = document.createElement("br");
         tmpinput.appendChild(tmptext);
         tmpinput.name = 'opta' + optid2;
@@ -55,12 +56,18 @@
         <div id="options">
             <font color="red"> 村长候选人列表：<br>
             </font>
+            {% for cz in czs %}
+                选项{{forloop.counter0}}：<input name="opt{{forloop.counter0}}" value="{{cz.name}}"/><br>
+            {% endfor %}
         </div>
         <button type="button" class="btn btn-default" onclick="addopt()"> 添加村长候选人
         </button>
         <div id="options2">
             <font color="red"> 委员候选人列表：<br>
             </font>
+            {% for wy in wys %}
+                选项{{forloop.counter0}}：<input name="opta{{forloop.counter0}}" value="{{wy.name}}"/><br>
+            {% endfor %}
         </div>
         <button type="button" class="btn btn-default" onclick="addopt2()"> 添加委员候选人
         </button>
@@ -68,6 +75,7 @@
         <input type="submit" class="btn btn-default" value="提交" />
     </form>
 </div>
+{% endwith %}
 <style type="text/css">
     #navcreatepoll {color:red;}
 </style>

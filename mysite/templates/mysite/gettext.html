@@ -1,0 +1,15 @@
+{% include 'mysite/header.html' %}
+{% load bootstrap %}
+{% load static %}
+{% load custom_filter %}
+
+<div class="container">
+    {{ content|spacify|linebreaks }}
+</div>
+
+
+<style type="text/css">
+    #{{ navlabel }} {color:red;}
+</style>
+
+
