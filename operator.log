@@ -189,3 +189,162 @@
 2016-01-23 20:53:01,911 管理员 进入 管理页面
 2016-01-23 20:53:32,541 管理员 进入 管理页面
 2016-01-23 20:56:17,333 管理员 进入 管理页面
+2016-01-23 23:25:34,947 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-23 23:25:34,948 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-23 23:25:59,504 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-23 23:25:59,504 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-23 23:26:15,962 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-23 23:26:15,968 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-23 23:26:52,798 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-23 23:26:53,267 Not Found: /favicon.ico
+2016-01-23 23:26:54,381 管理员 进入 管理页面
+2016-01-23 23:26:55,726 /usr/local/lib/python2.7/dist-packages/bootstrapform/templatetags/bootstrap.py:80: RemovedInDjango110Warning: render() must be called with a dict, not a Context.
+  return template.render(context)
+
+2016-01-23 23:26:57,541 Internal Server Error: /settext/1
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/root/poll/mysite/views.py", line 715, in settext
+    form = SetTextForm(initial = {"content":Text.objects.all().filter(id = id)[0].content})
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 297, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+2016-01-23 23:27:12,205 管理员 进入 管理页面
+2016-01-23 23:28:22,955 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-23 23:28:22,960 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-23 23:28:25,633 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-23 23:28:36,843 Not Found: /asdfsf
+2016-01-23 23:29:02,144 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-23 23:29:02,144 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-23 23:29:18,767 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-23 23:29:43,289 Not Found: /http:/zc.qq.com/cgi-bin/common/attr
+2016-01-23 23:31:12,037 Not Found: /favicon.ico
+2016-01-23 23:31:16,213 Not Found: /getseeed
+2016-01-23 23:34:06,420 Not Found: /favicon.ico
+2016-01-23 23:34:50,598 Internal Server Error: /auth/10000/70e4b9d5538ad307c6210bef07a50117
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sessions/middleware.py", line 50, in process_response
+    request.session.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sessions/backends/cached_db.py", line 65, in save
+    super(SessionStore, self).save(must_create)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sessions/backends/db.py", line 80, in save
+    return self.create()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sessions/backends/db.py", line 49, in create
+    self._session_key = self._get_new_session_key()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sessions/backends/base.py", line 155, in _get_new_session_key
+    if not self.exists(session_key):
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sessions/backends/cached_db.py", line 60, in exists
+    if session_key and (self.cache_key_prefix + session_key) in self._cache:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/cache/backends/base.py", line 203, in __contains__
+    return self.has_key(key)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/cache/backends/db.py", line 180, in has_key
+    [key, connection.ops.adapt_datetimefield_value(now)])
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 112, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 174, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'poll.my_cache_table' doesn't exist")
+2016-01-23 23:37:39,807 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-23 23:37:39,808 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-23 23:37:44,348 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-23 23:37:44,348 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-23 23:37:52,208 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-23 23:37:56,368 Internal Server Error: /init
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/poll/mysite/views.py", line 53, in init
+    if DEBUG or Var.objects.all().filter("bind") == None:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 790, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 808, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 1243, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 1269, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 1146, in build_filter
+    arg, value = filter_expr
+ValueError: too many values to unpack
+2016-01-23 23:38:24,880 Internal Server Error: /init
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/poll/mysite/views.py", line 53, in init
+    if DEBUG or Var.objects.all().filter("bind") == None:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 790, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 808, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 1243, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 1269, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 1146, in build_filter
+    arg, value = filter_expr
+ValueError: too many values to unpack
+2016-01-23 23:38:43,141 /usr/local/lib/python2.7/dist-packages/bootstrapform/templatetags/bootstrap.py:80: RemovedInDjango110Warning: render() must be called with a dict, not a Context.
+  return template.render(context)
+
+2016-01-23 23:39:29,139 Not Found: /favicon.ico
+2016-01-23 23:40:19,494 管理员 进入 管理页面
+2016-01-23 23:41:01,607 管理员 进入 管理页面
+2016-01-23 23:42:25,081 管理员 进入 管理页面
+2016-01-23 23:43:14,657 管理员 进入 管理页面

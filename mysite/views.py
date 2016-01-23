@@ -14,7 +14,7 @@ import md5,string,xlrd,os,random
 import re
 from datetime import datetime
 from django.utils import timezone
-DEBUG = True
+DEBUG = False
 import logging
 logging.basicConfig(format='%(asctime)s %(message)s', filename='operator.log', level=logging.INFO)
 
@@ -776,7 +776,7 @@ def judge(request):
         jqObj = Judge_Queue.objects.all().filter(id = id)[0]
         if flag == 1 and jqObj.finished == False:
             if len(User.objects.all().filter(idsn = jqObj.idsn)) == 0:
-                User(idsn = jqObj.idsn, username = jqObj.username, phone = jqObj.username, type = jqObj.type).save()
+                User(idsn = jqObj.idsn, username = jqObj.username, phone = jqObj.phone, type = jqObj.type).save()
                 jqObj.finished = True
                 jqObj.save()
                 msg(request, 'mysite:judge', "审核接受成功!")
