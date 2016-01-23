@@ -17,12 +17,17 @@
     {% endfor %}
     </ul>
 </div>
-{% if closedFg %}
+{% if listtype == 2 %}
     <style type="text/css">
         #navadminpolls {color:red;}
     </style>
-{% else %}
+{% elif listtype == 1 %}
     <style type="text/css">
         #navopen {color:red;}
     </style>
+{% else %}
+    <style type="text/css">
+        #navall {color:red;}
+    </style>
 {% endif %}
+{% include 'mysite/footer.html' %}

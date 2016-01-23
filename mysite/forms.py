@@ -23,6 +23,12 @@ class RegForm(forms.Form):
     username = forms.CharField(max_length = 30, label = "姓名")
     idsn = forms.CharField(max_length = 30, label = '身份证号')
     phone = forms.CharField(max_length = 30, label = '手机号')
+    ET_CHOICES = [
+        (0, '当地居住选民'),
+        (1, '外地居住选民'),
+        (2, '非本村户籍选民'),
+    ]
+    type = forms.ChoiceField(widget = forms.Select, choices = ET_CHOICES, label = "选民类型")
     #addr = forms.CharField(max_length = 256)
     #birth = forms.CharField(max_length = 50)
     #sex = forms.CharField(max_length = 10)
@@ -30,6 +36,20 @@ class RegForm(forms.Form):
 
 class SetTextForm(forms.Form):
     content = forms.CharField(widget = forms.Textarea, label = '内容')
+
+class RegByJudgeForm(forms.Form):
+    username = forms.CharField(max_length = 30, label = "姓名")
+    #0当地居住选民  1外地居住选民 2非本村户籍选民
+    ET_CHOICES = [
+        (0, '当地居住选民'),
+        (1, '外地居住选民'),
+        (2, '非本村户籍选民'),
+    ]
+    type = forms.ChoiceField(widget = forms.Select, choices = ET_CHOICES, label = "选民类型")
+    idsn = forms.CharField( max_length = 19, label = '身份证号')
+    phone = forms.CharField(max_length = 11, label = '手机号')
+    frontpic = forms.FileField(label = "本人和身份证清晰正面合照")
+    backpic =  forms.FileField(label = "本人和身份证清晰背面合照")
 
 
 class RegCanditeForm(forms.Form):
@@ -39,9 +59,9 @@ class RegCanditeForm(forms.Form):
     ]
     eletype = forms.ChoiceField(widget = forms.Select, choices = ET_CHOICES, label = "竞选类型")
 
-    name = forms.CharField(max_length = 30, label = '姓名')
+    idsn = forms.CharField(max_length = 19, label = '身份证号')
 
-    picfile = forms.FileField(label = "上传头像")
+    picfile = forms.FileField(label = "上传头像", required=False)
 
     SEX_CHOICES = [
         ('男', '男'),

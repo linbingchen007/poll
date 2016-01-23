@@ -2,26 +2,31 @@
 {% load bootstrap %}
 {% load static %}
 <div class="container">
-    <div class="container">
-        {% if documents %}
-            <ul>
-            {% for document in documents %}
-                <li><a href="{{ document.docfile.url }}">{{ document.docfile.name }} &nbsp;{{ document.uid }}</a></li>
-            {% endfor %}
-            </ul>
-        {% else %}
-            <p>No documents.</p>
-        {% endif %}
-    </div>
+
 
     <div class="container">
         <!-- Upload form. Note enctype attribute! -->
-        <form action="{% url 'mysite:login' %}" method="post" enctype="multipart/form-data">
+        <form
+                {% if picreg %}
+                    action="{% url 'mysite:picreg' %}"
+                {% else %}
+                    action="{% url 'mysite:login' %}"
+                {% endif %}
+              method="post" enctype="multipart/form-data">
 
                 {{form | bootstrap}}
 
             </p>
-            <p><input type="submit" value="Upload" /></p>
+
+            <p><input class="btn btn-default" type="submit"
+                        {% if picreg %}
+                            value="提交登记申请"
+                        {% else %}
+                            value="Upload"
+                        {% endif %}
+
+                    /></p>
         </form>
     </div>
 </div>
+{% include 'mysite/footer.html' %}

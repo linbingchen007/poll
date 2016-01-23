@@ -6,8 +6,8 @@
     {% for candidate in candidates1 %}
         <div id="candidates" style="float:left;padding-left: 20pt">
             <a href="{% url "mysite:candidate" candidate.id %}">
-                <img src="{{candidate.picfile.url}}" width="70" height="100" alt="Some image">
-                <p>{{ candidate.name }}</p>
+                <img src="{% if candidate.picfile %}{{candidate.picfile.url}} {% endif %}" width="70" height="100" alt="Some image">
+                <p>{{ candidate.user.username }}&nbsp;{{ candidate.user.suffix }}</p>
             </a>
         </div>
     {% endfor %}
@@ -18,8 +18,8 @@
     {% for candidate in candidates0 %}
         <div id="candidates" style="float:left;padding-left: 20pt">
             <a href="{% url "mysite:candidate" candidate.id %}">
-                <img src="{{candidate.picfile.url}}" width="70" height="100" alt="Some image">
-                <p>{{ candidate.name }}</p>
+                <img src="{% if candidate.picfile %}{{candidate.picfile.url}} {% endif %}" width="70" height="100" alt="Some image">
+                <p>{{ candidate.user.username }}&nbsp;{{ candidate.user.suffix }}</p>
             </a>
         </div>
     {% endfor %}

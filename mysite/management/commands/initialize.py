@@ -24,3 +24,4 @@ class Command(BaseCommand):
         Var(name = "seed", val = ''.join(random.SystemRandom().choice(string.ascii_uppercase + string.digits) for _ in range(10))).save()
         Text(id = 0, content = "").save()
         Text(id = 1, content = "").save()
+        Text(id = 2, content = "").save()

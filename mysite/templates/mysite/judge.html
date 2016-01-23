@@ -1,0 +1,33 @@
+{% include 'mysite/manage.html' %}
+{% load static %}
+{% load bootstrap %}
+
+
+<div class="container">
+    {% if obj %}
+        <p>姓名：{{ obj.username }}</p>
+        <p>手机号：{{ obj.phone }}</p>
+        <p>身份证号：{{ obj.idsn }}</p>
+        <p>选民类型：
+            {% if obj.type == 0 %}
+                当地居住选民
+            {% elif obj.type == 1 %}
+                外地居住选民
+            {% else %}
+                非本村户籍选民
+            {% endif %}
+        </p>
+        <p>本人和身份证正面照：<img src="{{obj.frontpic.url}}" width="900"  alt="本人和身份证正面照"></p>
+        <p>本人和身份证背面照：<img src="{{obj.backpic.url}}" width="900"  alt="本人和身份证背面照"></p>
+        <form action="{% url 'mysite:judge' %}" method="post" align="center">
+            <input type="hidden" name="id" value="{{ obj.id }}" />
+            <button name="flag" type="submit" class="btn btn-danger" value="0">拒绝</button>
+            <button name="flag" type="submit" class="btn btn-success" value="1">接受</button>
+        </form>
+    {% else %}
+        当前没有审核任务！
+    {% endif %}
+</div>
+<style type="text/css">
+    #navjudge {color:red;}
+</style>

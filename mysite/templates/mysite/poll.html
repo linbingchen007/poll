@@ -2,14 +2,78 @@
 {% load static %}
 
 <script>
+
+
+    optid2 = {{ cnt0 }}
+
+    function addopt2() {
+        var tmpinput = document.createElement("input");
+        var tmptext = document.createTextNode("CLICK ME");
+        var tmpopttopic = document.createTextNode("选项" + optid2 + "：");
+        var br = document.createElement("br");
+        //tmpinput.appendChild(tmptext);
+        tmpinput.id = "wychoice" + optid2;
+        tmpinput.name = 'checkbox' + optid2;
+        tmpinput.className = "single-checkbox"
+        tmpinput.type = "checkbox"
+
+        var tmpinput2 = document.createElement("input");
+        tmpinput2.id = "wychoiceval" + optid2;
+        tmpinput2.type = "text"
+        optid2 += 1;
+        var frm = document.getElementById("options2");
+        //<input type="checkbox" class="single-checkbox" name="checkbox{{ opt.id }}" value="" /> <input type="text" id = "optionalczvalue"/> <br>
+        //frm.appendChild(tmpopttopic);
+        frm.appendChild(tmpinput);
+        frm.appendChild(tmpinput2);
+        frm.appendChild(br);
+        document.getElementById("wycnt").value = optid2
+    }
     jQuery(function(){
-    var limit = 3;
-    $('input.single-checkbox').on('change', function(evt) {
-       if($(this).siblings(':checked').length >= {{ topic.commitcnt }}) {
-           this.checked = false;
-       }
+        var limit = 3;
+        $('input.single-checkbox').on('change', function(evt) {
+           if($(this).siblings(':checked').length >= {{ topic.commitcnt }}) {
+               this.checked = false;
+           }
+        });
+        $(document).ready(function(){
+            $( "#optionalczvalue" ).keyup( function() {
+                $( "#optionalczkey").attr("value",$( "#optionalczvalue" ).val());
+            });
+        });
+
+
+    $("#wy").change(function () {
+            cnt = 0
+            for ( i = 0; i <= optid2; i++) {
+                if ($("#wychoice"+ i.toString()).prop('checked')) cnt++;
+
+            }
+            if (cnt > {{ topic.commitcnt }}) {
+                for ( i = 0; i <= optid2; i++) {
+                    $("#wychoice"+ i.toString()).removeAttr('checked');
+                }
+                alert("委员最多选{{ topic.commitcnt }}个！请重新选择！")
+            }
+        }
+    );
+
+
+    $("#wy").keyup( function() {
+            for ( i = {{ cnt0 }} ; i<=optid2; i++) {
+                $("#wychoice"+ i.toString()).attr("value",$( "#wychoiceval"+ i.toString() ).val());
+            }
+
+        }
+    ) ;
+
     });
-});
+
+
+
+
+
+
 
     function validate(form) {
         var valid = confirm('投票之后无法修改，请谨慎进行投票！！！！')
@@ -44,18 +108,25 @@
 <div class="container" id="poll">
     <form onsubmit="return validate(this);" class="form-poll" action="{% url 'mysite:pollvote' %}" method="post" enctype="multipart/form-data">
         <h3>{{ topic.text }}</h3>
+        <input type="hidden" value="{{ cnt0 }}" id="wycnt" name="wycnt"/>
         <div id="cz">
         选村长(单选)：<br>
-        {% for opt in topic.choices.all %}
-            <input type="radio" name="vote" value="{{ opt.id }}" /> {{ opt.text }} <br>
+        {% for opt in choices %}
+            <input type="radio" name="vote" value="{{ opt.text.username }} {{ opt.text.suffix }}" /> {{ opt.text.username }} &nbsp  {{ opt.text.suffix }}<br>
         {% endfor %}
+        <input type="radio" name="vote" id="optionalczkey" value="" /> <input type="text" id = "optionalczvalue"/><br>
         <br>
         </div>
         <div id="wy">
-        选村长(最多选{{ topic.commitcnt }}个)：<br>
-        {% for opt in topic.choices2.all %}
-            <input type="checkbox" class="single-checkbox" name="checkbox{{ opt.id }}" value="{{ opt.text }}" /> {{ opt.text }} <br>
-        {% endfor %}
+            选村长(最多选{{ topic.commitcnt }}个)：<br>
+            <div id="options2">
+                {% for opt in choices2 %}
+                    <input type="checkbox" id="wychoice{{ forloop.counter0 }}" class="single-checkbox" name="checkbox{{ forloop.counter0 }}" value="{{ opt.text.username }} {{ opt.text.suffix }}" /> {{ opt.text.username }} &nbsp  {{ opt.text.suffix }} <br>
+                {% endfor %}
+            </div>
+            <button type="button" class="btn btn-default" onclick="addopt2()"> 添加委员候选人
+            </button>
+
         </div>
         <input type="submit" class="btn btn-default" value="提交" />
     </form>

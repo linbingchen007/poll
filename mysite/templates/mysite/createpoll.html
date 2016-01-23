@@ -57,21 +57,25 @@
             <font color="red"> 村长候选人列表：<br>
             </font>
             {% for cz in czs %}
-                选项{{forloop.counter0}}：<input name="opt{{forloop.counter0}}" value="{{cz.name}}"/><br>
+                选项{{forloop.counter0}}：<input name="opt{{forloop.counter0}}" readonly="true" value="{{cz.user.username}} {{cz.user.suffix}}"/><br>
             {% endfor %}
         </div>
+        <!--
         <button type="button" class="btn btn-default" onclick="addopt()"> 添加村长候选人
         </button>
+        -->
         <div id="options2">
             <font color="red"> 委员候选人列表：<br>
             </font>
             {% for wy in wys %}
-                选项{{forloop.counter0}}：<input name="opta{{forloop.counter0}}" value="{{wy.name}}"/><br>
+                选项{{forloop.counter0}}：<input name="opta{{forloop.counter0}}" readonly="true" value="{{wy.user.username}} {{wy.user.suffix}}"/><br>
             {% endfor %}
         </div>
+        <!--
         <button type="button" class="btn btn-default" onclick="addopt2()"> 添加委员候选人
         </button>
         <br>
+        -->
         <input type="submit" class="btn btn-default" value="提交" />
     </form>
 </div>

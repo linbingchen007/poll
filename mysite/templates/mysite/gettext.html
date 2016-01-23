@@ -4,7 +4,10 @@
 {% load custom_filter %}
 
 <div class="container">
-    {{ content|spacify|linebreaks }}
+    {% autoescape on %}
+        {{ content|safe }}
+    {% endautoescape %}
+
 </div>
 
 

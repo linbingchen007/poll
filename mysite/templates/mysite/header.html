@@ -12,6 +12,11 @@
 <script src="{% static "jquery/jquery-1.10.2.js" %}"></script>
 <script src="{% static "jquery/jquery-ui.js" %}"></script>
 <script src="{% static "bootstrapdist/js/bootstrap.min.js" %}"></script>
+
+{% if editenb %}
+<script type="text/javascript" src="{% static "mysite/tinymce.min.js" %}"></script>
+
+{% else %}
 <script>
     jQuery(function($){
     $.datepicker.regional['zh-CN'] = {
@@ -40,7 +45,7 @@
     $( '#tdate').datepicker();
   });
   </script>
-
+{% endif %}
 </head>
 
  {% include 'mysite/nav.html' %}

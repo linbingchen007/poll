@@ -2,7 +2,7 @@
 {% load static %}
 <div class="container" xmlns="http://www.w3.org/1999/html">
     {% if obj %}
-        <p>姓名：{{ obj.name }}</p>
+        <p>姓名：{{ obj.user.username }}</p>
         <p>头像：<img src="{{obj.picfile.url}}" width="70" height="100" alt="Some image"></p>
         <p>竞选类型：
             {% if obj.eletype == 0 %}

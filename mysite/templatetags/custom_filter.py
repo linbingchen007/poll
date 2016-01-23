@@ -2,6 +2,7 @@ __author__ = 'linbingchen'
 from django import template
 from django.utils.html import conditional_escape
 from django.utils.safestring import mark_safe
+from mysite.models import User
 import re
 register = template.Library()
 
@@ -37,3 +38,7 @@ def spacify(value, autoescape=None):
     else:
         esc = lambda x: x
     return mark_safe(re.sub(' ', '&nbsp;', esc(value)))
+
+@register.simple_tag
+def getusercnt():
+    return User.objects.all().count()

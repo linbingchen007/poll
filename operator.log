@@ -1,0 +1,191 @@
+2016-01-17 18:59:57,559 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2016-01-17 18:59:57,560 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2016-01-17 18:59:57,560 (0.000) SELECT `mysite_question`.`id`, `mysite_question`.`text`, `mysite_question`.`pollcnt`, `mysite_question`.`st`, `mysite_question`.`dt`, `mysite_question`.`commitcnt` FROM `mysite_question` WHERE (`mysite_question`.`st` <= '2016-01-17 10:59:57.546701' AND `mysite_question`.`dt` > '2016-01-17 10:59:57.546701'); args=(u'2016-01-17 10:59:57.546701', u'2016-01-17 10:59:57.546701')
+2016-01-17 19:00:00,081 管理员 进入 管理页面
+2016-01-17 19:00:01,779 (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2016-01-17 19:00:01,779 (0.000) SELECT COUNT('*') AS `__count` FROM `mysite_user`; args=('*',)
+2016-01-17 19:00:01,780 (0.000) SELECT cache_key, value, expires FROM `my_cache_table` WHERE cache_key = ':1:django.contrib.sessions.cached_dbnforcapxjifzuzrwoqttlibpq7968t8r'; args=[u':1:django.contrib.sessions.cached_dbnforcapxjifzuzrwoqttlibpq7968t8r']
+2016-01-17 19:00:01,788 (0.000) SELECT `mysite_user`.`id`, `mysite_user`.`username`, `mysite_user`.`idsn`, `mysite_user`.`addr`, `mysite_user`.`birth`, `mysite_user`.`sex`, `mysite_user`.`phone`, `mysite_user`.`pwd`, `mysite_user`.`nation`, `mysite_user`.`hashsn` FROM `mysite_user` LIMIT 1; args=()
+2016-01-17 19:00:03,799 管理员 进入 管理页面
+2016-01-17 19:00:53,005 管理员 进入 管理页面
+2016-01-17 19:01:05,080 管理员 进入 管理页面
+2016-01-17 19:18:15,178 管理员 进入 管理页面
+2016-01-17 19:23:51,294 管理员 进入 管理页面
+2016-01-17 19:23:52,621 管理员 进入 管理页面
+2016-01-17 19:24:40,304 管理员 进入 管理页面
+2016-01-17 19:24:48,548 管理员 进入 管理页面
+2016-01-17 19:24:55,997 管理员 进入 管理页面
+2016-01-17 19:25:17,626 管理员 进入 管理页面
+2016-01-17 19:25:22,294 管理员 进入 管理页面
+2016-01-17 19:26:33,519 管理员 进入 管理页面
+2016-01-17 19:31:55,513 管理员 进入 管理页面
+2016-01-17 19:32:41,664 /Library/Python/2.7/site-packages/django/db/models/fields/__init__.py:1474: RuntimeWarning: DateTimeField Question.st received a naive datetime (2016-01-17 19:00:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-17 19:32:41,677 /Library/Python/2.7/site-packages/django/db/models/fields/__init__.py:1474: RuntimeWarning: DateTimeField Question.dt received a naive datetime (2016-01-17 20:00:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-17 19:33:27,720 管理员 进入 管理页面
+2016-01-17 19:41:38,396 管理员 进入 管理页面
+2016-01-17 19:43:01,480 管理员 进入 管理页面
+2016-01-17 19:44:55,669 管理员 进入 管理页面
+2016-01-17 19:45:07,737 管理员 进入 管理页面
+2016-01-17 19:46:02,703 管理员 进入 管理页面
+2016-01-17 19:47:27,936 管理员 进入 管理页面
+2016-01-17 20:04:46,087 管理员 进入 管理页面
+2016-01-17 20:09:58,478 管理员 进入 管理页面
+2016-01-17 20:10:01,167 管理员 进入 管理页面
+2016-01-17 20:12:37,519 管理员 进入 管理页面
+2016-01-17 20:13:02,226 管理员 进入 管理页面
+2016-01-17 20:13:04,757 管理员 进入 管理页面
+2016-01-17 20:13:59,949 管理员 进入 管理页面
+2016-01-17 20:15:01,499 /Library/Python/2.7/site-packages/django/db/models/fields/__init__.py:1474: RuntimeWarning: DateTimeField Question.st received a naive datetime (2016-01-17 20:00:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-17 20:15:01,511 /Library/Python/2.7/site-packages/django/db/models/fields/__init__.py:1474: RuntimeWarning: DateTimeField Question.dt received a naive datetime (2016-01-17 23:00:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-17 20:15:10,353 管理员 进入 管理页面
+2016-01-17 20:26:08,933 管理员 进入 管理页面
+2016-01-17 20:26:19,384 管理员 进入 管理页面
+2016-01-17 20:56:22,825 管理员 进入 管理页面
+2016-01-17 21:00:06,163 /Library/Python/2.7/site-packages/django/forms/fields.py:885: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  if value == k or text_value == force_text(k):
+
+2016-01-17 21:02:17,849 管理员 进入 管理页面
+2016-01-17 21:24:16,518 管理员 进入 管理页面
+2016-01-17 21:24:37,814 管理员 进入 管理页面
+2016-01-17 21:24:56,329 /Library/Python/2.7/site-packages/django/forms/fields.py:885: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  if value == k or text_value == force_text(k):
+
+2016-01-17 21:25:51,970 管理员 进入 管理页面
+2016-01-17 21:28:12,088 管理员 进入 管理页面
+2016-01-17 21:35:20,239 管理员 进入 管理页面
+2016-01-17 21:36:53,811 管理员 进入 管理页面
+2016-01-17 21:42:47,988 管理员 进入 管理页面
+2016-01-17 21:42:50,317 管理员 进入 管理页面
+2016-01-17 22:04:18,753 /Library/Python/2.7/site-packages/django/db/models/fields/__init__.py:1474: RuntimeWarning: DateTimeField Question.st received a naive datetime (2016-01-17 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-17 22:04:18,763 /Library/Python/2.7/site-packages/django/db/models/fields/__init__.py:1474: RuntimeWarning: DateTimeField Question.dt received a naive datetime (2016-01-17 23:00:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-17 22:05:09,502 /Library/Python/2.7/site-packages/django/db/models/fields/__init__.py:1474: RuntimeWarning: DateTimeField Question.st received a naive datetime (2016-01-17 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-17 22:05:09,513 /Library/Python/2.7/site-packages/django/db/models/fields/__init__.py:1474: RuntimeWarning: DateTimeField Question.dt received a naive datetime (2016-01-17 23:00:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-17 22:05:46,406 管理员 进入 管理页面
+2016-01-17 22:05:50,352 管理员 进入 管理页面
+2016-01-17 22:05:52,646 管理员 进入 管理页面
+2016-01-17 22:06:34,604 管理员 进入 管理页面
+2016-01-17 22:07:46,835 /Library/Python/2.7/site-packages/django/forms/fields.py:885: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  if value == k or text_value == force_text(k):
+
+2016-01-17 22:08:35,697 /Library/Python/2.7/site-packages/django/forms/fields.py:885: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  if value == k or text_value == force_text(k):
+
+2016-01-17 22:10:38,571 /Library/Python/2.7/site-packages/django/forms/fields.py:885: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  if value == k or text_value == force_text(k):
+
+2016-01-17 22:10:41,965 管理员 进入 管理页面
+2016-01-17 22:16:44,599 管理员 进入 管理页面
+2016-01-17 22:17:18,853 管理员 进入 管理页面
+2016-01-17 22:19:56,945 管理员 进入 管理页面
+2016-01-17 22:20:06,268 管理员 进入 管理页面
+2016-01-17 22:20:17,603 管理员 进入 管理页面
+2016-01-17 22:20:45,977 管理员 进入 管理页面
+2016-01-17 22:20:57,574 管理员 进入 管理页面
+2016-01-17 22:21:11,605 /Library/Python/2.7/site-packages/django/forms/fields.py:885: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  if value == k or text_value == force_text(k):
+
+2016-01-17 22:21:13,096 管理员 进入 管理页面
+2016-01-17 22:21:15,394 管理员 进入 管理页面
+2016-01-17 22:23:01,887 管理员 进入 管理页面
+2016-01-17 22:23:06,060 管理员 进入 管理页面
+2016-01-17 22:26:04,292 管理员 进入 管理页面
+2016-01-17 22:39:28,241 管理员 进入 管理页面
+2016-01-17 22:39:36,661 /Library/Python/2.7/site-packages/django/db/models/fields/__init__.py:1474: RuntimeWarning: DateTimeField Question.st received a naive datetime (2016-01-17 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-17 22:39:36,674 /Library/Python/2.7/site-packages/django/db/models/fields/__init__.py:1474: RuntimeWarning: DateTimeField Question.dt received a naive datetime (2016-01-17 23:00:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-17 22:40:02,329 管理员 进入 管理页面
+2016-01-17 22:40:06,109 管理员 进入 管理页面
+2016-01-17 22:40:14,121 /Library/Python/2.7/site-packages/django/db/models/fields/__init__.py:1474: RuntimeWarning: DateTimeField Question.st received a naive datetime (2016-01-17 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-17 22:40:14,132 /Library/Python/2.7/site-packages/django/db/models/fields/__init__.py:1474: RuntimeWarning: DateTimeField Question.dt received a naive datetime (2016-01-17 23:00:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-17 22:40:39,045 管理员 进入 管理页面
+2016-01-17 22:45:25,921 管理员 进入 管理页面
+2016-01-17 23:01:53,210 管理员 进入 管理页面
+2016-01-17 23:02:20,656 管理员 进入 管理页面
+2016-01-17 23:02:34,107 /Library/Python/2.7/site-packages/django/db/models/fields/__init__.py:1474: RuntimeWarning: DateTimeField Question.st received a naive datetime (2016-01-17 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-17 23:02:34,119 /Library/Python/2.7/site-packages/django/db/models/fields/__init__.py:1474: RuntimeWarning: DateTimeField Question.dt received a naive datetime (2016-01-17 23:59:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-18 00:00:01,750 管理员 进入 管理页面
+2016-01-18 00:00:11,258 /Library/Python/2.7/site-packages/django/db/models/fields/__init__.py:1474: RuntimeWarning: DateTimeField Question.st received a naive datetime (2016-01-18 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-18 00:00:11,270 /Library/Python/2.7/site-packages/django/db/models/fields/__init__.py:1474: RuntimeWarning: DateTimeField Question.dt received a naive datetime (2016-01-18 22:00:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-18 02:31:32,759 管理员 进入 管理页面
+2016-01-18 02:32:22,396 管理员 进入 管理页面
+2016-01-18 02:32:39,488 管理员 进入 管理页面
+2016-01-18 02:32:57,020 管理员 进入 管理页面
+2016-01-18 02:35:01,620 管理员 进入 管理页面
+2016-01-18 02:35:20,935 管理员 进入 管理页面
+2016-01-18 02:37:20,176 管理员 进入 管理页面
+2016-01-18 02:37:28,204 /Library/Python/2.7/site-packages/django/db/models/fields/__init__.py:1474: RuntimeWarning: DateTimeField Question.st received a naive datetime (2016-01-18 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-18 02:37:28,215 /Library/Python/2.7/site-packages/django/db/models/fields/__init__.py:1474: RuntimeWarning: DateTimeField Question.dt received a naive datetime (2016-01-18 23:00:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-18 02:38:44,392 管理员 进入 管理页面
+2016-01-23 15:15:12,563 管理员 进入 管理页面
+2016-01-23 15:18:32,646 管理员 进入 管理页面
+2016-01-23 15:44:35,536 管理员 进入 管理页面
+2016-01-23 15:54:56,370 管理员 进入 管理页面
+2016-01-23 15:54:57,907 管理员 进入 管理页面
+2016-01-23 16:11:32,121 管理员 进入 管理页面
+2016-01-23 16:12:32,701 管理员 进入 管理页面
+2016-01-23 16:12:49,860 管理员 进入 管理页面
+2016-01-23 16:14:12,431 管理员 进入 管理页面
+2016-01-23 16:14:53,109 管理员 进入 管理页面
+2016-01-23 16:15:21,644 管理员 进入 管理页面
+2016-01-23 16:19:26,387 管理员 进入 管理页面
+2016-01-23 16:22:57,884 管理员 进入 管理页面
+2016-01-23 16:23:00,476 管理员 进入 管理页面
+2016-01-23 16:23:20,712 管理员 进入 管理页面
+2016-01-23 16:23:32,838 管理员 进入 管理页面
+2016-01-23 16:23:38,726 管理员 进入 管理页面
+2016-01-23 16:23:49,724 管理员 进入 管理页面
+2016-01-23 16:24:38,023 管理员 进入 管理页面
+2016-01-23 16:50:26,413 管理员 进入 管理页面
+2016-01-23 17:14:43,968 管理员 进入 管理页面
+2016-01-23 17:16:24,858 管理员 进入 管理页面
+2016-01-23 17:18:28,200 管理员 进入 管理页面
+2016-01-23 17:24:22,184 管理员 进入 管理页面
+2016-01-23 17:25:11,085 管理员 进入 管理页面
+2016-01-23 17:27:47,076 管理员 进入 管理页面
+2016-01-23 17:48:35,266 管理员 进入 管理页面
+2016-01-23 20:47:02,490 管理员 进入 管理页面
+2016-01-23 20:47:05,787 管理员 进入 管理页面
+2016-01-23 20:47:08,831 管理员 进入 管理页面
+2016-01-23 20:47:25,005 管理员 进入 管理页面
+2016-01-23 20:47:58,356 管理员 进入 管理页面
+2016-01-23 20:48:27,598 管理员 进入 管理页面
+2016-01-23 20:51:45,005 管理员 进入 管理页面
+2016-01-23 20:52:40,615 管理员 进入 管理页面
+2016-01-23 20:53:01,911 管理员 进入 管理页面
+2016-01-23 20:53:32,541 管理员 进入 管理页面
+2016-01-23 20:56:17,333 管理员 进入 管理页面

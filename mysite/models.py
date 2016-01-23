@@ -9,6 +9,12 @@ def pic_path(instance, filename):
 def exl_path(instance, filename):
     return "target.xlsx"
 
+def frontpic_path(instance, filename):
+    return 'frontpic/{0}.jpg'.format(str(datetime.now()).replace(':','.'))
+
+def backpic_path(instance, filename):
+    return 'backpic/{0}.jpg'.format(str(datetime.now()).replace(':','.'))
+
 def candidatepic_path(instance, filename):
     return 'candidate/{0}.jpg'.format(str(datetime.now()).replace(':','.'))
 
@@ -18,7 +24,7 @@ def randpwd():
 class Pic(models.Model):
     id = models.AutoField(primary_key = True)
     date = models.DateTimeField(db_index = True, default=datetime.now)
-    docfile = models.FileField(upload_to = pic_path)
+    docfile = models.FileField(upload_to = pic_path , blank=True, null=True)
     uid = models.CharField(max_length = 20)
 
 class Exl(models.Model):
@@ -27,15 +33,20 @@ class Exl(models.Model):
    
 class User(models.Model):
     id = models.AutoField(primary_key = True)
-    username = models.CharField(max_length = 30)
+    username = models.CharField(max_length = 30, db_index=True)
+    #0当地居住选民  1外地居住选民 2非本村户籍选民
+    type = models.IntegerField(default=0, db_index=True)
+    #身份证号
     idsn = models.CharField(db_index = True, max_length = 30)
     addr = models.CharField(max_length = 256)
     birth = models.CharField(max_length = 50)
+    suffix = models.CharField(max_length = 6, db_index=True, default = "")
     sex = models.CharField(max_length = 10)
     phone = models.CharField(max_length = 20)
     pwd = models.CharField(max_length=40, default = randpwd)
     #True female False male
     nation = models.CharField(max_length = 30)
+    #密钥
     hashsn = models.CharField(db_index = True, max_length = 35)
 
 class Question(models.Model):
@@ -50,13 +61,15 @@ class Question(models.Model):
 class Choice(models.Model):
     id = models.AutoField(primary_key = True)
     question = models.ForeignKey(Question, related_name='choices')
-    text = models.CharField(max_length = 256)
+    text = models.ForeignKey(User)
+    type =  models.IntegerField(default = 1)  # 0candidate 1optional
     val = models.IntegerField(default = 0)
 
 class Choice2(models.Model):
     id = models.AutoField(primary_key = True)
     question = models.ForeignKey(Question, related_name='choices2')
-    text = models.CharField(max_length = 256)
+    text = models.ForeignKey(User)
+    type = models.IntegerField(default = 1)  # 0candidate 1optional
     val = models.IntegerField(default = 0)
 
 class User_Choice_Rel(models.Model):
@@ -89,7 +102,7 @@ class Candidate(models.Model):
     id = models.AutoField(primary_key = True)
     # 0 委员 1 主任
     eletype = models.IntegerField(default = 0)
-    name = models.CharField(max_length = 30)
+    user = models.ForeignKey(User)
     picfile = models.FileField(upload_to = candidatepic_path)
     sex = models.CharField(max_length = 6, default = "男")
     birthyear = models.IntegerField(default = 0)
@@ -113,6 +126,24 @@ class Text(models.Model):
     id = models.IntegerField(primary_key = True)
     content = models.TextField()
 
+class Judge_Queue(models.Model):
+    id = models.AutoField(primary_key = True)
+    username = models.CharField(max_length = 30, db_index=True)
+    #0当地居住选民  1外地居住选民 2非本村户籍选民
+    type = models.IntegerField(default=0, db_index=True)
+    idsn = models.CharField(db_index = True, max_length = 30)
+    phone = models.CharField(max_length = 20)
+    frontpic = models.FileField(upload_to = frontpic_path)
+    backpic =  models.FileField(upload_to = backpic_path)
+    finished = models.BooleanField(default=False, db_index=True)
 
-    
+
+
+
+
+
+
+
+
+
 
