@@ -348,3 +348,381 @@ ValueError: too many values to unpack
 2016-01-23 23:41:01,607 管理员 进入 管理页面
 2016-01-23 23:42:25,081 管理员 进入 管理页面
 2016-01-23 23:43:14,657 管理员 进入 管理页面
+2016-01-23 23:48:41,328 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-23 23:48:41,329 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-23 23:48:41,588 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-23 23:48:45,462 管理员 进入 管理页面
+2016-01-23 23:48:47,642 /usr/local/lib/python2.7/dist-packages/bootstrapform/templatetags/bootstrap.py:80: RemovedInDjango110Warning: render() must be called with a dict, not a Context.
+  return template.render(context)
+
+2016-01-23 23:49:13,129 Not Found: /favicon.ico
+2016-01-23 23:50:12,090 管理员 进入 管理页面
+2016-01-23 23:53:22,922 管理员 进入 管理页面
+2016-01-23 23:54:54,428 管理员 进入 管理页面
+2016-01-23 23:55:58,974 管理员 进入 管理页面
+2016-01-23 23:56:23,764 管理员 进入 管理页面
+2016-01-23 23:56:39,851 管理员 进入 管理页面
+2016-01-23 23:57:19,603 /usr/local/lib/python2.7/dist-packages/django/forms/fields.py:849: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  if value == k or text_value == force_text(k):
+
+2016-01-23 23:57:21,148 管理员 进入 管理页面
+2016-01-23 23:58:12,380 管理员 进入 管理页面
+2016-01-23 23:59:22,373 管理员 进入 管理页面
+2016-01-24 00:02:20,104 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-24 00:02:20,105 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-24 00:02:26,630 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-24 00:02:31,171 管理员 进入 管理页面
+2016-01-24 00:02:50,565 管理员 进入 管理页面
+2016-01-24 00:02:54,564 /usr/local/lib/python2.7/dist-packages/bootstrapform/templatetags/bootstrap.py:80: RemovedInDjango110Warning: render() must be called with a dict, not a Context.
+  return template.render(context)
+
+2016-01-24 00:03:19,628 管理员 进入 管理页面
+2016-01-24 00:03:41,614 /usr/local/lib/python2.7/dist-packages/django/forms/fields.py:849: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  if value == k or text_value == force_text(k):
+
+2016-01-24 00:03:43,122 管理员 进入 管理页面
+2016-01-24 00:05:30,300 Not Found: /favicon.ico
+2016-01-24 00:06:22,813 管理员 进入 管理页面
+2016-01-24 00:08:22,426 管理员 进入 管理页面
+2016-01-24 00:09:16,306 管理员 进入 管理页面
+2016-01-24 00:10:25,077 /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField Question.st received a naive datetime (2016-01-24 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-24 00:10:25,078 /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField Question.dt received a naive datetime (2016-01-24 00:15:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-24 00:10:46,821 Internal Server Error: /auth/10005/412295b892e75f8abe93eabcc9ed411d
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view mysite.views.auth didn't return an HttpResponse object. It returned None instead.
+2016-01-24 00:10:47,064 Not Found: /favicon.ico
+2016-01-24 00:11:16,531 Internal Server Error: /auth/10006/c35d682d742cabe64892d9ba67f6a045
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view mysite.views.auth didn't return an HttpResponse object. It returned None instead.
+2016-01-24 00:11:16,774 Not Found: /favicon.ico
+2016-01-24 00:12:09,641 Internal Server Error: /auth/10007/6b438fd9b3205459905ee30f3929fa59
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view mysite.views.auth didn't return an HttpResponse object. It returned None instead.
+2016-01-24 00:12:09,879 Not Found: /favicon.ico
+2016-01-24 00:14:18,617 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-24 00:14:18,620 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-24 00:14:25,403 Internal Server Error: /auth/10008/133c1ce01336c359e42e90bdf439c79d
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view mysite.views.auth didn't return an HttpResponse object. It returned None instead.
+2016-01-24 00:14:25,653 Not Found: /favicon.ico
+2016-01-24 00:17:36,091 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-24 00:17:36,092 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-24 00:17:45,161 Not Found: /getauth
+2016-01-24 00:17:53,760 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-24 00:18:19,120 Not Found: /favicon.ico
+2016-01-24 00:18:35,647 管理员 进入 管理页面
+2016-01-24 00:19:01,249 /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField Question.st received a naive datetime (2016-01-24 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-24 00:19:01,250 /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField Question.dt received a naive datetime (2016-01-24 00:30:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-24 00:19:10,884 Internal Server Error: /auth/10011/22d43e99da90de72839399d98f5d3946
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view mysite.views.auth didn't return an HttpResponse object. It returned None instead.
+2016-01-24 00:19:11,126 Not Found: /favicon.ico
+2016-01-24 00:19:40,056 Internal Server Error: /auth/10012/8a6983ca839a35e607575cbc8b01a95c
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view mysite.views.auth didn't return an HttpResponse object. It returned None instead.
+2016-01-24 00:19:40,285 Not Found: /favicon.ico
+2016-01-24 00:21:49,247 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-24 00:21:49,248 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-24 00:21:53,223 Internal Server Error: /auth/10013/e721329a85399d2b0aca7c7555e58186
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view mysite.views.auth didn't return an HttpResponse object. It returned None instead.
+2016-01-24 00:21:53,455 Not Found: /favicon.ico
+2016-01-24 00:22:48,763 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-24 00:22:48,768 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-24 00:22:55,585 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-24 00:22:58,598 /usr/local/lib/python2.7/dist-packages/bootstrapform/templatetags/bootstrap.py:80: RemovedInDjango110Warning: render() must be called with a dict, not a Context.
+  return template.render(context)
+
+2016-01-24 00:29:33,944 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-24 00:29:33,945 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-24 00:29:37,203 Internal Server Error: /auth/10014/6e004819ff1901b6a6fa767848d9fe05
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view mysite.views.auth didn't return an HttpResponse object. It returned None instead.
+2016-01-24 00:29:43,898 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-24 00:30:23,556 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-24 00:30:23,560 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-24 00:30:25,713 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-24 00:30:31,466 管理员 进入 管理页面
+2016-01-24 00:30:48,241 /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField Question.st received a naive datetime (2016-01-24 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-24 00:30:48,243 /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField Question.dt received a naive datetime (2016-01-24 23:00:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-24 00:30:53,611 管理员 进入 管理页面
+2016-01-24 00:31:09,564 /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField Question.st received a naive datetime (2016-01-24 00:22:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-24 00:31:09,565 /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField Question.dt received a naive datetime (2016-01-24 00:44:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-24 00:31:16,432 管理员 进入 管理页面
+2016-01-24 00:35:59,734 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-24 00:35:59,734 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-24 00:45:11,392 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-24 00:45:11,392 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-24 00:45:16,674 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-24 00:45:16,913 Not Found: /favicon.ico
+2016-01-24 00:45:18,381 管理员 进入 管理页面
+2016-01-24 00:45:20,764 /usr/local/lib/python2.7/dist-packages/bootstrapform/templatetags/bootstrap.py:80: RemovedInDjango110Warning: render() must be called with a dict, not a Context.
+  return template.render(context)
+
+2016-01-24 00:45:42,747 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-24 00:45:42,748 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-24 00:46:22,488 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-24 00:46:22,649 Not Found: /favicon.ico
+2016-01-24 00:47:01,467 Not Found: /favicon.ico
+2016-01-24 00:48:39,734 Not Found: /favicon.ico
+2016-01-24 00:48:45,497 /usr/local/lib/python2.7/dist-packages/bootstrapform/templatetags/bootstrap.py:80: RemovedInDjango110Warning: render() must be called with a dict, not a Context.
+  return template.render(context)
+
+2016-01-24 00:51:01,797 管理员 进入 管理页面
+2016-01-24 00:52:07,997 管理员 进入 管理页面
+2016-01-24 00:55:37,866 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-24 00:55:37,872 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-24 00:55:39,460 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-24 00:55:39,473 /usr/local/lib/python2.7/dist-packages/bootstrapform/templatetags/bootstrap.py:80: RemovedInDjango110Warning: render() must be called with a dict, not a Context.
+  return template.render(context)
+
+2016-01-24 00:55:46,429 Internal Server Error: /regexl
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/root/poll/mysite/views.py", line 134, in regexl
+    addVoter(worksheet.cell_value(i,0), worksheet.cell_value(i,1), worksheet.cell_value(i,2), worksheet.cell_value(i,3))
+  File "/root/poll/mysite/views.py", line 103, in addVoter
+    User(idsn = idsn, username = name, phone = phone, type = int(type)).save()
+ValueError: invalid literal for int() with base 10: ''
+2016-01-24 00:57:42,437 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-24 00:57:42,438 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-24 00:59:23,138 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-24 00:59:26,375 /usr/local/lib/python2.7/dist-packages/bootstrapform/templatetags/bootstrap.py:80: RemovedInDjango110Warning: render() must be called with a dict, not a Context.
+  return template.render(context)
+
+2016-01-24 01:00:13,486 管理员 进入 管理页面
+2016-01-24 01:00:33,211 /usr/local/lib/python2.7/dist-packages/django/forms/fields.py:849: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  if value == k or text_value == force_text(k):
+
+2016-01-24 01:00:34,942 管理员 进入 管理页面
+2016-01-24 01:00:41,524 管理员 进入 管理页面
+2016-01-24 01:00:50,941 管理员 进入 管理页面
+2016-01-24 01:01:04,014 管理员 进入 管理页面
+2016-01-24 01:01:13,880 管理员 进入 管理页面
+2016-01-24 01:01:28,308 管理员 进入 管理页面
+2016-01-24 01:01:44,531 管理员 进入 管理页面
+2016-01-24 01:02:04,376 管理员 进入 管理页面
+2016-01-24 01:05:16,441 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-24 01:05:16,441 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-24 01:05:20,992 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-24 01:05:21,006 /usr/local/lib/python2.7/dist-packages/bootstrapform/templatetags/bootstrap.py:80: RemovedInDjango110Warning: render() must be called with a dict, not a Context.
+  return template.render(context)
+
+2016-01-24 01:08:32,078 /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField Question.st received a naive datetime (2016-01-24 01:09:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-24 01:08:32,079 /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField Question.dt received a naive datetime (2016-01-24 01:15:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-24 01:13:47,028 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-24 01:13:47,028 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-24 01:13:49,264 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-24 01:14:44,634 Internal Server Error: /pollvote
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/root/poll/mysite/views.py", line 434, in pollvote
+    curChoice = getChoice2(topic, getUser(request.POST["checkbox" + str(i)]))
+  File "/root/poll/mysite/views.py", line 403, in getChoice2
+    newChoice = Choice2(question = question, text = text)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 431, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/related_descriptors.py", line 199, in __set__
+    (instance._meta.object_name, self.field.name)
+ValueError: Cannot assign None: "Choice2.text" does not allow null values.
+2016-01-24 01:18:24,709 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-24 01:18:24,715 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-24 01:18:30,566 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-24 01:23:04,199 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-24 01:23:04,204 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-24 01:23:05,672 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-24 01:23:14,631 管理员 进入 管理页面
+2016-01-24 01:23:36,456 /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField Question.st received a naive datetime (2016-01-24 00:20:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-24 01:23:36,457 /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField Question.dt received a naive datetime (2016-01-24 00:30:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-24 01:23:39,378 管理员 进入 管理页面
+2016-01-24 01:23:43,886 管理员 进入 管理页面
+2016-01-24 01:24:22,164 /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField Question.st received a naive datetime (2016-01-24 01:20:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-24 01:24:22,165 /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField Question.dt received a naive datetime (2016-01-24 01:40:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-24 01:31:38,604 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-24 01:31:38,605 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-24 01:32:00,547 管理员 进入 管理页面
+2016-01-24 01:32:00,555 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-24 01:33:28,709 管理员 进入 管理页面
+2016-01-24 01:34:26,638 管理员 进入 管理页面
+2016-01-24 01:34:34,785 /usr/local/lib/python2.7/dist-packages/bootstrapform/templatetags/bootstrap.py:80: RemovedInDjango110Warning: render() must be called with a dict, not a Context.
+  return template.render(context)
+
+2016-01-24 01:52:06,637 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-24 01:52:06,640 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-24 01:52:13,181 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-24 01:52:38,653 /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField Question.st received a naive datetime (2016-01-24 01:51:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-24 01:52:38,654 /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField Question.dt received a naive datetime (2016-01-24 00:59:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-24 01:52:50,440 管理员 进入 管理页面
+2016-01-24 01:53:07,070 /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField Question.st received a naive datetime (2016-01-24 01:00:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-24 01:53:07,071 /usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField Question.dt received a naive datetime (2016-01-24 23:00:00) while time zone support is active.
+  RuntimeWarning)
+
+2016-01-24 01:54:30,949 管理员 进入 管理页面

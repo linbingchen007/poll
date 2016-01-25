@@ -14,7 +14,7 @@ import md5,string,xlrd,os,random
 import re
 from datetime import datetime
 from django.utils import timezone
-DEBUG = False
+DEBUG = True
 import logging
 logging.basicConfig(format='%(asctime)s %(message)s', filename='operator.log', level=logging.INFO)
 
@@ -100,10 +100,14 @@ def login(request):
 def addVoter(name, idsn, phone, type = 0):
     chkobjs = User.objects.all().filter(idsn = idsn)
     if len(chkobjs) == 0:
-        User(idsn = idsn, username = name, phone = phone, type = int(type)).save()
+        try:
+            User(idsn = idsn, username = name, phone = phone, type = int(type), suffix=idsn[14:18]).save()
+        except:
+            User(idsn = idsn, username = name, phone = phone, type = 0, suffix=idsn[14:18]).save()
     else:
         chkobjs[0].username = name
         chkobjs[0].phone = phone
+        chkobjs[0].suffix = idsn[14:18]
         try:
             chkobjs[0].type = int(type)
         except:
@@ -126,17 +130,17 @@ def regexl(request):
             path = newexl.docfile.path
             workbook = xlrd.open_workbook(path)
             worksheet = workbook.sheet_by_index(0)
-            try:
-                for i in range(1,worksheet.nrows):
-                    if worksheet.ncols == 3:
-                        addVoter(worksheet.cell_value(i,0), worksheet.cell_value(i,1), worksheet.cell_value(i,2))
-                    elif worksheet.ncols == 4:
-                        addVoter(worksheet.cell_value(i,0), worksheet.cell_value(i,1), worksheet.cell_value(i,2), worksheet.cell_value(i,3))
-                    else:
-                        raise
-                return msg(request, "mysite:regexl", "导入成功！")
-            except:
-                return msg(request, "mysite:regexl", "导入异常！")
+            #try:
+            for i in range(1,worksheet.nrows):
+                if worksheet.ncols == 3:
+                    addVoter(worksheet.cell_value(i,0), worksheet.cell_value(i,1), worksheet.cell_value(i,2))
+                elif worksheet.ncols == 4:
+                    addVoter(worksheet.cell_value(i,0), worksheet.cell_value(i,1), worksheet.cell_value(i,2), worksheet.cell_value(i,3))
+                else:
+                    raise
+            return msg(request, "mysite:regexl", "导入成功！")
+            #except:
+            #    return msg(request, "mysite:regexl", "导入异常！")
     form = RegExlForm()
     return render_to_response('mysite/regexl.html', {"form": form}, context_instance=RequestContext(request))
 
@@ -314,11 +318,7 @@ def isTopicClosed(topicId):
 
 @csrf_exempt
 def pollresult(request, topicid, type = 0):
-    if chkAdminCookies(request) == None:
-        return  msg(request, "mysite:index", "无权限查看！")
     topic = Question.objects.all().filter(id = topicid)[0]
-    if DEBUG == False and isTopicClosed(topic.id) == False:
-        return msg(request, "mysite:index", "投票尚未结束，不能查看结果")
     if int(type) == 0:
         c = {
             "topic" : topic,
@@ -385,6 +385,8 @@ def getUser(Str):
         return None
 
 def getChoice(question, text):
+    if text == "" or text == None:
+        return None
     qryObjs = Choice.objects.all().filter(question = question).filter(text = text)
     if len(qryObjs) == 1:
         return qryObjs[0]
@@ -396,6 +398,8 @@ def getChoice(question, text):
         return None
 
 def getChoice2(question, text):
+    if text == '' or text == None:
+        return None
     qryObjs = Choice2.objects.all().filter(question = question).filter(text = text)
     if len(qryObjs) == 1:
         return qryObjs[0]
@@ -417,6 +421,8 @@ def pollvote(request, topicid = None, optid = None):
         ######!!!!!!!!!!!
         user = User.objects.all().filter(idsn = request.session.get('uid', None))[0]
         curChoice = getChoice(topic, cz)
+        if curChoice == None:
+            return msg(request, "mysite:index", "另选人不能为空!或者存在重名的另选人，请在名字后面加上空格+身份证后4位重新投票！")
         qryRes = User_Choice_Rel.objects.filter(user = user).filter(choice = curChoice)
         if qryRes == None or len(qryRes) == 0:
             curChoice.val += 1
@@ -427,11 +433,16 @@ def pollvote(request, topicid = None, optid = None):
         for i in range(wyCnt):
             if "checkbox" + str(i) in request.POST:
                 checkedCnt += 1
+		curChoice = getChoice2(topic, getUser(request.POST["checkbox" + str(i)]))
+                if curChoice == None:
+                    return msg(request, "mysite:index", "存在重名的另选人，请在名字后面加上空格+身份证后4位重新投票！")
             if checkedCnt > topic.commitcnt:
                 return msg(request, "mysite:index", "选举的委员数量多于限定值！")
         for i in range(wyCnt):
             if "checkbox" + str(i) in request.POST:
                 curChoice = getChoice2(topic, getUser(request.POST["checkbox" + str(i)]))
+                if curChoice == None:
+                    return msg(request, "mysite:index", "存在重名的另选人，请在名字后面加上空格+身份证后4位重新投票！")
                 qryRes = User_Choice2_Rel.objects.filter(user = user).filter(choice2 = curChoice)
                 if qryRes == None or len(qryRes) == 0:
                     curChoice.val += 1
@@ -776,7 +787,7 @@ def judge(request):
         jqObj = Judge_Queue.objects.all().filter(id = id)[0]
         if flag == 1 and jqObj.finished == False:
             if len(User.objects.all().filter(idsn = jqObj.idsn)) == 0:
-                User(idsn = jqObj.idsn, username = jqObj.username, phone = jqObj.phone, type = jqObj.type).save()
+                User(idsn = jqObj.idsn, username = jqObj.username, phone = jqObj.phone, type = jqObj.type, suffix = jqObj.idsn[14:18]).save()
                 jqObj.finished = True
                 jqObj.save()
                 msg(request, 'mysite:judge', "审核接受成功!")
