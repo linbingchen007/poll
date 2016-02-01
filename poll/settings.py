@@ -106,10 +106,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_ROOT='media'
+MEDIA_ROOT='/var/www/poll/media/'
 
 MEDIA_URL = '/media/'
 
-STATIC_ROOT='static'
+STATIC_ROOT='/var/www/poll/static/'
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True

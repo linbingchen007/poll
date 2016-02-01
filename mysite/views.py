@@ -14,7 +14,7 @@ import md5,string,xlrd,os,random
 import re
 from datetime import datetime
 from django.utils import timezone
-DEBUG = True
+DEBUG = False
 import logging
 logging.basicConfig(format='%(asctime)s %(message)s', filename='operator.log', level=logging.INFO)
 

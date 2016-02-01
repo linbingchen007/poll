@@ -726,3 +726,1101 @@ ValueError: Cannot assign None: "Choice2.text" does not allow null values.
   RuntimeWarning)
 
 2016-01-24 01:54:30,949 管理员 进入 管理页面
+2016-01-25 15:34:36,370 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-25 15:34:36,371 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-25 15:34:49,602 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-25 15:34:49,602 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-25 15:36:49,209 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-25 15:36:49,216 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-25 15:37:04,403 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-25 15:37:28,500 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-25 15:37:28,501 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-25 15:37:31,606 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-25 15:37:33,130 管理员 进入 管理页面
+2016-01-25 15:37:41,907 /usr/local/lib/python2.7/dist-packages/bootstrapform/templatetags/bootstrap.py:80: RemovedInDjango110Warning: render() must be called with a dict, not a Context.
+  return template.render(context)
+
+2016-01-25 15:38:00,649 管理员 进入 管理页面
+2016-01-25 16:12:24,835 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-25 16:12:24,836 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-25 16:12:45,144 Not Found: /favicon.ico
+2016-01-25 16:12:46,612 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-25 16:12:48,080 Not Found: /favicon.ico
+2016-01-25 16:13:07,276 Not Found: /favicon.ico
+2016-01-25 16:13:53,836 Not Found: /favicon.ico
+2016-01-25 16:14:01,952 Not Found: /favicon.ico
+2016-01-25 16:14:05,884 Not Found: /favicon.ico
+2016-01-25 16:14:07,208 Not Found: /favicon.ico
+2016-01-25 16:14:08,372 Not Found: /favicon.ico
+2016-01-25 16:14:09,612 Not Found: /favicon.ico
+2016-01-25 16:14:10,640 Not Found: /favicon.ico
+2016-01-25 16:14:11,580 Not Found: /favicon.ico
+2016-01-25 16:14:12,310 管理员 进入 管理页面
+2016-01-25 16:14:12,740 Not Found: /favicon.ico
+2016-01-25 16:14:13,740 Not Found: /favicon.ico
+2016-01-25 16:14:13,859 /usr/local/lib/python2.7/dist-packages/bootstrapform/templatetags/bootstrap.py:80: RemovedInDjango110Warning: render() must be called with a dict, not a Context.
+  return template.render(context)
+
+2016-01-25 16:14:14,628 Not Found: /favicon.ico
+2016-01-25 16:14:15,120 管理员 进入 管理页面
+2016-01-25 16:14:15,412 Not Found: /favicon.ico
+2016-01-25 16:14:17,052 管理员 进入 管理页面
+2016-01-25 16:14:17,364 Not Found: /favicon.ico
+2016-01-25 16:14:23,256 Not Found: /favicon.ico
+2016-01-25 16:14:23,584 管理员 进入 管理页面
+2016-01-25 16:14:23,836 Not Found: /favicon.ico
+2016-01-25 16:14:33,053 管理员 进入 管理页面
+2016-01-25 16:14:33,904 Not Found: /favicon.ico
+2016-01-25 16:14:34,068 Not Found: /favicon.ico
+2016-01-25 16:14:37,353 Not Found: /favicon.ico
+2016-01-25 16:14:50,396 /usr/local/lib/python2.7/dist-packages/django/forms/fields.py:849: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  if value == k or text_value == force_text(k):
+
+2016-01-25 16:14:50,672 Not Found: /favicon.ico
+2016-01-25 16:14:54,104 Not Found: /favicon.ico
+2016-01-25 16:15:15,097 管理员 进入 管理页面
+2016-01-25 16:15:17,473 管理员 进入 管理页面
+2016-01-25 16:15:48,556 Not Found: /favicon.ico
+2016-01-25 16:15:49,728 Not Found: /favicon.ico
+2016-01-25 16:15:52,560 Not Found: /favicon.ico
+2016-01-25 16:15:52,988 Not Found: /favicon.ico
+2016-01-25 16:15:55,315 Not Found: /favicon.ico
+2016-01-25 16:15:59,028 Not Found: /favicon.ico
+2016-01-25 16:16:00,384 Not Found: /favicon.ico
+2016-01-25 16:16:06,935 Not Found: /favicon.ico
+2016-01-25 16:16:07,432 Not Found: /favicon.ico
+2016-01-25 16:16:07,624 Not Found: /favicon.ico
+2016-01-25 16:16:09,225 Not Found: /favicon.ico
+2016-01-25 16:16:33,480 Not Found: /favicon.ico
+2016-01-25 16:16:36,976 Not Found: /favicon.ico
+2016-01-25 16:26:32,841 Not Found: /favicon.ico
+2016-01-25 16:26:35,476 Not Found: /favicon.ico
+2016-01-25 16:26:36,337 Not Found: /favicon.ico
+2016-01-25 16:26:38,152 Not Found: /favicon.ico
+2016-01-25 16:26:38,741 Not Found: /favicon.ico
+2016-01-25 16:26:40,281 Not Found: /favicon.ico
+2016-01-25 16:26:40,885 Not Found: /favicon.ico
+2016-01-25 16:26:41,673 Not Found: /favicon.ico
+2016-01-25 16:26:42,272 Not Found: /favicon.ico
+2016-01-25 16:26:43,125 管理员 进入 管理页面
+2016-01-25 16:26:43,369 Not Found: /favicon.ico
+2016-01-25 16:26:45,177 Not Found: /favicon.ico
+2016-01-25 16:26:45,749 Not Found: /favicon.ico
+2016-01-25 16:26:46,357 Not Found: /favicon.ico
+2016-01-25 16:26:47,237 Not Found: /favicon.ico
+2016-01-25 16:29:58,657 Not Found: /favicon.ico
+2016-01-25 16:29:59,928 Not Found: /favicon.ico
+2016-01-25 16:47:32,757 Not Found: /http:/m.baidu.com/
+2016-01-25 16:47:32,845 Not Found: /http:/www.sogou.com/
+2016-01-25 16:47:32,934 Not Found: /http:/www.1dvj.com/
+2016-01-25 16:47:33,033 Not Found: /http:/www.kuaidaili.com/
+2016-01-25 17:11:52,089 Not Found: /http:/zc.qq.com/cgi-bin/common/attr
+2016-01-25 17:42:31,170 Not Found: /http:/www.baidu.com/cache/global/img/gs.gif
+2016-01-31 19:53:00,629 /root/poll/mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 19:53:00,629 /root/poll/poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:01:07,231 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:01:07,231 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:01:07,262 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 20:01:07,532 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:01:07,533 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:01:07,538 Not Found: /favicon.ico
+2016-01-31 20:01:13,586 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 20:02:42,388 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:02:42,399 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:02:42,419 Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "./mysite/views.py", line 463, in polls
+    if not chkAdminCookies(request) and not valid(request, key or request.session.get('key', None), uid or request.session.get('uid', None), request.session.get('pwd', None)):
+  File "./mysite/views.py", line 208, in chkAdminCookies
+    if pollsRunning != None and len(pollsRunning) > 0:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 240, in __len__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1074, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 52, in __iter__
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 837, in execute_sql
+    sql, params = self.as_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 389, in as_sql
+    where, w_params = self.compile(self.where) if self.where is not None else ("", [])
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 366, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/where.py", line 79, in as_sql
+    sql, params = compiler.compile(child)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 366, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/lookups.py", line 157, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/lookups.py", line 150, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py", line 625, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 184, in data_types
+    if self.features.supports_microsecond_precision:
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/features.py", line 53, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 359, in mysql_version
+    with self.temporary_connection():
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 564, in temporary_connection
+    cursor = self.cursor()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 231, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 204, in _cursor
+    self.ensure_connection()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 199, in ensure_connection
+    self.connect()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 199, in ensure_connection
+    self.connect()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 171, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 264, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2002, "Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111)")
+2016-01-31 20:02:46,809 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:02:46,809 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:02:46,816 Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "./mysite/views.py", line 463, in polls
+    if not chkAdminCookies(request) and not valid(request, key or request.session.get('key', None), uid or request.session.get('uid', None), request.session.get('pwd', None)):
+  File "./mysite/views.py", line 208, in chkAdminCookies
+    if pollsRunning != None and len(pollsRunning) > 0:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 240, in __len__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1074, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 52, in __iter__
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 837, in execute_sql
+    sql, params = self.as_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 389, in as_sql
+    where, w_params = self.compile(self.where) if self.where is not None else ("", [])
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 366, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/where.py", line 79, in as_sql
+    sql, params = compiler.compile(child)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 366, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/lookups.py", line 157, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/lookups.py", line 150, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py", line 625, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 184, in data_types
+    if self.features.supports_microsecond_precision:
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/features.py", line 53, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 359, in mysql_version
+    with self.temporary_connection():
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 564, in temporary_connection
+    cursor = self.cursor()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 231, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 204, in _cursor
+    self.ensure_connection()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 199, in ensure_connection
+    self.connect()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 199, in ensure_connection
+    self.connect()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 171, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 264, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2002, "Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111)")
+2016-01-31 20:02:49,309 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:02:49,309 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:02:49,316 Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "./mysite/views.py", line 463, in polls
+    if not chkAdminCookies(request) and not valid(request, key or request.session.get('key', None), uid or request.session.get('uid', None), request.session.get('pwd', None)):
+  File "./mysite/views.py", line 208, in chkAdminCookies
+    if pollsRunning != None and len(pollsRunning) > 0:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 240, in __len__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1074, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 52, in __iter__
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 837, in execute_sql
+    sql, params = self.as_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 389, in as_sql
+    where, w_params = self.compile(self.where) if self.where is not None else ("", [])
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 366, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/where.py", line 79, in as_sql
+    sql, params = compiler.compile(child)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 366, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/lookups.py", line 157, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/lookups.py", line 150, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py", line 625, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 184, in data_types
+    if self.features.supports_microsecond_precision:
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/features.py", line 53, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 359, in mysql_version
+    with self.temporary_connection():
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 564, in temporary_connection
+    cursor = self.cursor()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 231, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 204, in _cursor
+    self.ensure_connection()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 199, in ensure_connection
+    self.connect()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 199, in ensure_connection
+    self.connect()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 171, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 264, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2002, "Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111)")
+2016-01-31 20:02:58,431 Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "./mysite/views.py", line 463, in polls
+    if not chkAdminCookies(request) and not valid(request, key or request.session.get('key', None), uid or request.session.get('uid', None), request.session.get('pwd', None)):
+  File "./mysite/views.py", line 208, in chkAdminCookies
+    if pollsRunning != None and len(pollsRunning) > 0:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 240, in __len__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1074, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 52, in __iter__
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 837, in execute_sql
+    sql, params = self.as_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 389, in as_sql
+    where, w_params = self.compile(self.where) if self.where is not None else ("", [])
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 366, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/where.py", line 79, in as_sql
+    sql, params = compiler.compile(child)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 366, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/lookups.py", line 157, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/lookups.py", line 150, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py", line 625, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 184, in data_types
+    if self.features.supports_microsecond_precision:
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/features.py", line 53, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 359, in mysql_version
+    with self.temporary_connection():
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 564, in temporary_connection
+    cursor = self.cursor()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 231, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 204, in _cursor
+    self.ensure_connection()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 199, in ensure_connection
+    self.connect()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 199, in ensure_connection
+    self.connect()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 171, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 264, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2002, "Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111)")
+2016-01-31 20:02:58,832 Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "./mysite/views.py", line 463, in polls
+    if not chkAdminCookies(request) and not valid(request, key or request.session.get('key', None), uid or request.session.get('uid', None), request.session.get('pwd', None)):
+  File "./mysite/views.py", line 208, in chkAdminCookies
+    if pollsRunning != None and len(pollsRunning) > 0:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 240, in __len__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1074, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 52, in __iter__
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 837, in execute_sql
+    sql, params = self.as_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 389, in as_sql
+    where, w_params = self.compile(self.where) if self.where is not None else ("", [])
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 366, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/where.py", line 79, in as_sql
+    sql, params = compiler.compile(child)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 366, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/lookups.py", line 157, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/lookups.py", line 150, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py", line 625, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 184, in data_types
+    if self.features.supports_microsecond_precision:
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/features.py", line 53, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 359, in mysql_version
+    with self.temporary_connection():
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 564, in temporary_connection
+    cursor = self.cursor()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 231, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 204, in _cursor
+    self.ensure_connection()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 199, in ensure_connection
+    self.connect()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 199, in ensure_connection
+    self.connect()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 171, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 264, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2002, "Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111)")
+2016-01-31 20:03:49,201 Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "./mysite/views.py", line 463, in polls
+    if not chkAdminCookies(request) and not valid(request, key or request.session.get('key', None), uid or request.session.get('uid', None), request.session.get('pwd', None)):
+  File "./mysite/views.py", line 208, in chkAdminCookies
+    if pollsRunning != None and len(pollsRunning) > 0:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 240, in __len__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1074, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 52, in __iter__
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 837, in execute_sql
+    sql, params = self.as_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 389, in as_sql
+    where, w_params = self.compile(self.where) if self.where is not None else ("", [])
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 366, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/where.py", line 79, in as_sql
+    sql, params = compiler.compile(child)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 366, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/lookups.py", line 157, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/lookups.py", line 150, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py", line 625, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 184, in data_types
+    if self.features.supports_microsecond_precision:
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/features.py", line 53, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 359, in mysql_version
+    with self.temporary_connection():
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 564, in temporary_connection
+    cursor = self.cursor()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 231, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 204, in _cursor
+    self.ensure_connection()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 199, in ensure_connection
+    self.connect()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 199, in ensure_connection
+    self.connect()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 171, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 264, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2002, "Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111)")
+2016-01-31 20:03:50,376 Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "./mysite/views.py", line 463, in polls
+    if not chkAdminCookies(request) and not valid(request, key or request.session.get('key', None), uid or request.session.get('uid', None), request.session.get('pwd', None)):
+  File "./mysite/views.py", line 208, in chkAdminCookies
+    if pollsRunning != None and len(pollsRunning) > 0:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 240, in __len__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1074, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 52, in __iter__
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 837, in execute_sql
+    sql, params = self.as_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 389, in as_sql
+    where, w_params = self.compile(self.where) if self.where is not None else ("", [])
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 366, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/where.py", line 79, in as_sql
+    sql, params = compiler.compile(child)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 366, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/lookups.py", line 157, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/lookups.py", line 150, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py", line 625, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 184, in data_types
+    if self.features.supports_microsecond_precision:
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/features.py", line 53, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 359, in mysql_version
+    with self.temporary_connection():
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 564, in temporary_connection
+    cursor = self.cursor()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 231, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 204, in _cursor
+    self.ensure_connection()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 199, in ensure_connection
+    self.connect()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 199, in ensure_connection
+    self.connect()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 171, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 264, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2002, "Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111)")
+2016-01-31 20:05:04,743 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 20:05:06,632 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 20:05:59,076 Not Found: /favicon.ico
+2016-01-31 20:17:29,790 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:17:29,792 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:17:29,852 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 20:17:31,755 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:17:31,755 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:17:31,775 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 20:17:32,877 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:17:32,878 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:17:32,901 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 20:18:57,707 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:18:57,709 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:18:57,727 Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "./mysite/views.py", line 463, in polls
+    if not chkAdminCookies(request) and not valid(request, key or request.session.get('key', None), uid or request.session.get('uid', None), request.session.get('pwd', None)):
+  File "./mysite/views.py", line 208, in chkAdminCookies
+    if pollsRunning != None and len(pollsRunning) > 0:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 240, in __len__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1074, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 52, in __iter__
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 837, in execute_sql
+    sql, params = self.as_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 389, in as_sql
+    where, w_params = self.compile(self.where) if self.where is not None else ("", [])
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 366, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/where.py", line 79, in as_sql
+    sql, params = compiler.compile(child)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 366, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/lookups.py", line 157, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/lookups.py", line 150, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py", line 625, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 184, in data_types
+    if self.features.supports_microsecond_precision:
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/features.py", line 53, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 359, in mysql_version
+    with self.temporary_connection():
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 564, in temporary_connection
+    cursor = self.cursor()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 231, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 204, in _cursor
+    self.ensure_connection()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 199, in ensure_connection
+    self.connect()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 199, in ensure_connection
+    self.connect()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/base/base.py", line 171, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 264, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2002, "Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111)")
+2016-01-31 20:19:10,070 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:19:10,070 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:19:10,112 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 20:19:11,755 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:19:11,756 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:19:11,765 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 20:20:30,211 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:20:30,213 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:20:30,261 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 20:20:31,829 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:20:31,829 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:20:31,851 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 20:20:33,562 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:20:33,562 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:20:33,583 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 20:27:41,149 Not Found: /azenv.php
+2016-01-31 20:36:41,958 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:36:41,959 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:36:41,976 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 20:36:43,704 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:36:43,705 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:36:43,714 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 20:36:44,325 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:36:44,325 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:36:44,345 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 20:36:53,335 /usr/local/lib/python2.7/dist-packages/bootstrapform/templatetags/bootstrap.py:80: RemovedInDjango110Warning: render() must be called with a dict, not a Context.
+  return template.render(context)
+
+2016-01-31 20:37:44,580 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:37:44,581 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:37:44,591 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 20:37:44,609 /usr/local/lib/python2.7/dist-packages/bootstrapform/templatetags/bootstrap.py:80: RemovedInDjango110Warning: render() must be called with a dict, not a Context.
+  return template.render(context)
+
+2016-01-31 20:37:46,748 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:37:46,748 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:37:46,757 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 20:37:47,248 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:37:47,248 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:37:47,269 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 20:40:49,977 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:40:49,978 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:40:49,995 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 20:40:51,134 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:40:51,135 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:40:51,156 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 20:40:54,303 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:40:54,303 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:40:54,320 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 20:51:57,690 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:51:57,690 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:51:57,711 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 20:51:59,551 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:51:59,552 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:51:59,562 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 20:52:00,552 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:52:00,552 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:52:00,572 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 20:52:57,642 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:52:57,643 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:52:57,655 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 20:52:58,251 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:52:58,251 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:52:58,261 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 20:52:59,262 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:52:59,262 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:52:59,283 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 20:53:08,377 /usr/local/lib/python2.7/dist-packages/bootstrapform/templatetags/bootstrap.py:80: RemovedInDjango110Warning: render() must be called with a dict, not a Context.
+  return template.render(context)
+
+2016-01-31 20:53:31,560 管理员 进入 管理页面
+2016-01-31 20:53:31,910 管理员 进入 管理页面
+2016-01-31 20:56:16,048 /usr/local/lib/python2.7/dist-packages/bootstrapform/templatetags/bootstrap.py:80: RemovedInDjango110Warning: render() must be called with a dict, not a Context.
+  return template.render(context)
+
+2016-01-31 20:56:29,430 管理员 进入 管理页面
+2016-01-31 20:57:45,156 管理员 进入 管理页面
+2016-01-31 20:59:54,567 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:59:54,568 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:59:54,577 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 20:59:56,582 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:59:56,583 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:59:56,591 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 20:59:58,079 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 20:59:58,079 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 20:59:58,098 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 21:02:52,873 Not Found: /static
+2016-01-31 21:03:07,152 /usr/local/lib/python2.7/dist-packages/bootstrapform/templatetags/bootstrap.py:80: RemovedInDjango110Warning: render() must be called with a dict, not a Context.
+  return template.render(context)
+
+2016-01-31 21:03:21,369 管理员 进入 管理页面
+2016-01-31 21:03:43,382 管理员 进入 管理页面
+2016-01-31 21:05:27,533 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 21:05:27,534 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 21:05:27,555 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 21:05:28,849 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 21:05:28,850 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 21:05:28,881 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 21:05:30,820 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 21:05:30,821 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 21:05:30,831 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 21:05:31,726 /usr/local/lib/python2.7/dist-packages/bootstrapform/templatetags/bootstrap.py:80: RemovedInDjango110Warning: render() must be called with a dict, not a Context.
+  return template.render(context)
+
+2016-01-31 21:05:45,228 管理员 进入 管理页面
+2016-01-31 21:06:27,165 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 21:06:27,165 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 21:06:27,187 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 21:06:29,220 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 21:06:29,221 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 21:06:29,225 Not Found: /getkey
+2016-01-31 21:06:35,125 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 21:06:35,125 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 21:06:35,142 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 21:06:36,808 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 21:18:39,458 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 21:18:39,460 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 21:18:39,511 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 21:18:42,078 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 21:18:42,078 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 21:18:42,098 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 21:18:42,599 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 21:18:42,600 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 21:18:42,665 /usr/local/lib/python2.7/dist-packages/django/shortcuts.py:45: RemovedInDjango110Warning: The context_instance argument of render_to_string is deprecated.
+  using=using)
+
+2016-01-31 21:22:33,820 Not Found: /cache/global/img/gs.gif
+2016-01-31 21:23:41,596 Not Found: /apple-touch-icon-precomposed.png
+2016-01-31 21:23:41,636 ./mysite/urls.py:43: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^judge$', views.judge, name='judge'),
+
+2016-01-31 21:23:41,636 ./poll/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^',include('mysite.urls',namespace='mysite')),
+
+2016-01-31 21:23:41,641 Not Found: /favicon.ico
+2016-01-31 21:23:41,659 Not Found: /apple-touch-icon.png
+2016-01-31 21:23:41,767 Not Found: /apple-touch-icon-precomposed.png
+2016-01-31 21:23:41,818 Not Found: /apple-touch-icon.png
+2016-02-01 01:13:32,121 Not Found: /azenv.php
+2016-02-01 03:08:02,687 Not Found: /apple-touch-icon-120x120-precomposed.png
+2016-02-01 03:08:02,745 Not Found: /apple-touch-icon-120x120.png
+2016-02-01 03:08:02,808 Not Found: /apple-touch-icon.png
+2016-02-01 03:08:03,125 Not Found: /apple-touch-icon.png
+2016-02-01 03:08:03,187 Not Found: /favicon.ico
+2016-02-01 03:08:03,246 Not Found: /apple-touch-icon-precomposed.png
+2016-02-01 03:08:03,335 Not Found: /favicon.ico
+2016-02-01 05:55:59,011 Not Found: /cache/global/img/gs.gif
+2016-02-01 06:02:10,100 Not Found: /azenv.php
+2016-02-01 06:43:41,834 Not Found: /cache/global/img/gs.gif
+2016-02-01 11:07:00,810 Not Found: /azenv.php
+2016-02-01 14:31:08,524 Not Found: /webadmin/scripts/setup.php
+2016-02-01 14:46:47,236 Not Found: /cache/global/img/gs.gif
+2016-02-01 16:00:22,701 Not Found: /azenv.php
+2016-02-01 17:29:24,860 Not Found: /admincp.php
+2016-02-01 20:29:55,004 Not Found: /robots.txt
+2016-02-01 20:29:55,368 Not Found: /sitemap.xml
+2016-02-01 22:18:23,844 Not Found: /testproxy.php
