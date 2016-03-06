@@ -14,7 +14,7 @@ import md5,string,xlrd,os,random
 import re
 from datetime import datetime
 from django.utils import timezone
-DEBUG = False
+DEBUG = True
 import logging
 logging.basicConfig(format='%(asctime)s %(message)s', filename='operator.log', level=logging.INFO)
 
@@ -101,12 +101,12 @@ def addVoter(name, idsn, phone, type = 0):
     chkobjs = User.objects.all().filter(idsn = idsn)
     if len(chkobjs) == 0:
         try:
-            User(idsn = idsn, username = name, phone = phone, type = int(type), suffix=idsn[14:18]).save()
+            User(idsn = idsn, username = name, phone = str(int(phone)), type = int(type), suffix=idsn[14:18]).save()
         except:
-            User(idsn = idsn, username = name, phone = phone, type = 0, suffix=idsn[14:18]).save()
+            User(idsn = idsn, username = name, phone = str(int(phone)), type = 0, suffix=idsn[14:18]).save()
     else:
         chkobjs[0].username = name
-        chkobjs[0].phone = phone
+        chkobjs[0].phone = str(int(phone))
         chkobjs[0].suffix = idsn[14:18]
         try:
             chkobjs[0].type = int(type)
@@ -634,9 +634,10 @@ def addcandidate(request):
     if request.method == 'POST':
         form = RegCanditeForm(request.POST, request.FILES)
         if form.is_valid():
-            if request.POST['picfile'] == '':
-                picfile = None
-            else:
+            try:
+                if request.POST['picfile'] == '':
+                    picfile = None
+            except:
                 picfile = request.FILES['picfile']
             eletype = request.POST['eletype']
             sex = request.POST['sex']
