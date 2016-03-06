@@ -101,12 +101,21 @@ def addVoter(name, idsn, phone, type = 0):
     chkobjs = User.objects.all().filter(idsn = idsn)
     if len(chkobjs) == 0:
         try:
-            User(idsn = idsn, username = name, phone = type(phone) != type("") and str(int(phone)) or phone, type = int(type), suffix=idsn[14:18]).save()
+            if isinstance(phone,(float,int)):
+                User(idsn = idsn, username = name, phone = str(int(phone)), type = int(type), suffix=idsn[14:18]).save()
+            else:
+                User(idsn = idsn, username = name, phone = phone, type = int(type), suffix=idsn[14:18]).save()
         except:
-            User(idsn = idsn, username = name, phone = type(phone) != type("") and str(int(phone)) or phone, type = 0, suffix=idsn[14:18]).save()
+            if isinstance(phone,(float,int)):
+                User(idsn = idsn, username = name, phone = str(int(phone)), type = 0, suffix=idsn[14:18]).save()
+            else:
+                User(idsn = idsn, username = name, phone = phone, type = 0, suffix=idsn[14:18]).save()
     else:
         chkobjs[0].username = name
-        chkobjs[0].phone = type(phone) != type("") and str(int(phone)) or phone
+        if isinstance(phone,(float,int)):
+            chkobjs[0].phone = str(int(phone))
+        else:
+            chkobjs[0].phone = phone
         chkobjs[0].suffix = idsn[14:18]
         try:
             chkobjs[0].type = int(type)
