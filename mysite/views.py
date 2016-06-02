@@ -474,6 +474,7 @@ def polls(request, type = 1, key = None, uid = None):
     if key != None and uid != None:
         request.session['key'] = key
         request.session['uid'] = uid
+        request.session['pwd'] = User.objects.all().filter(idsn = uid)[0].pwd
     topics = None
     try:
         itype = int(type)
